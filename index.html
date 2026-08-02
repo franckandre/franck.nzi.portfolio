@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kouamé Franck André N'Zi | Water Resources & Hydraulic Engineer</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --accent-color: #0284c7; /* Water blue */
+      --accent-hover: #0369a1;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --code-bg: #f1f5f9;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #1e293b;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent-color: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --border-color: #334155;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.3);
+      --code-bg: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0 3rem;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero .highlight {
+      color: var(--accent-color);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 750px;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      border-color: var(--border-color);
+      color: var(--text-primary);
+      background-color: var(--bg-secondary);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 3rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    section h2 i {
+      color: var(--accent-color);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .skill-list strong {
+      color: var(--text-primary);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .project-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+
+    .tag {
+      background-color: var(--code-bg);
+      color: var(--accent-color);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Learning Badge */
+    .learning-card {
+      background-color: var(--bg-card);
+      border: 1px dashed var(--accent-color);
+      padding: 1.25rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .learning-card i {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 3rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .nav-links {
+        gap: 1rem;
+      }
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Franck N'Zi</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <h1>Hi, I'm <span class="highlight">Kouamé Franck André N'Zi</span> 👋</h1>
+      <p>
+        Recent Master's graduate in <strong>Integrated Water Management</strong>, specializing in <strong>Hydraulic Drainage Systems</strong>. 
+        Passionate about hydrologic and hydraulic modeling, urban drainage systems, flood risk assessment, and sustainable water resources engineering.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <h2><i class="fa-solid fa-gears"></i> Technical Skills</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-water"></i> Hydrologic & Hydraulic</h3>
+          <ul class="skill-list">
+            <li><strong>HEC-RAS (1D/2D):</strong> Flood modeling & hydraulic analysis</li>
+            <li><strong>HEC-HMS:</strong> Rainfall-runoff & watershed simulation</li>
+            <li><strong>EPA SWMM:</strong> Urban stormwater & drainage modeling</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-map-location-dot"></i> GIS & Remote Sensing</h3>
+          <ul class="skill-list">
+            <li><strong>QGIS:</strong> Spatial analysis, mapping & hydrology</li>
+            <li><strong>Google Earth Engine:</strong> Remote sensing & environmental data analysis</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-laptop-code"></i> Productivity & Office</h3>
+          <ul class="skill-list">
+            <li><strong>Microsoft Excel:</strong> Data analysis & calculations</li>
+            <li><strong>Microsoft Word:</strong> Technical documentation</li>
+            <li><strong>Microsoft PowerPoint:</strong> Presentations</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects">
+      <h2><i class="fa-solid fa-diagram-project"></i> Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>Flood Inundation Modeling</h3>
+          <p>Hydraulic simulation and floodplain mapping to evaluate flood extents and support risk assessment studies.</p>
+          <div class="tags">
+            <span class="tag">HEC-RAS 1D/2D</span>
+            <span class="tag">Flood Risk</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Rainfall-Runoff Modeling</h3>
+          <p>Hydrological analysis simulating watershed response, peak discharges, and runoff behavior under storm events.</p>
+          <div class="tags">
+            <span class="tag">HEC-HMS</span>
+            <span class="tag">Hydrology</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Urban Drainage System Analysis</h3>
+          <p>Stormwater management studies assessing drainage network capacity and evaluating hydraulic performance.</p>
+          <div class="tags">
+            <span class="tag">EPA SWMM</span>
+            <span class="tag">Stormwater</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>GIS-Based Water Resources Applications</h3>
+          <p>Spatial analysis and environmental monitoring to support sustainable water management decision-making.</p>
+          <div class="tags">
+            <span class="tag">QGIS</span>
+            <span class="tag">Google Earth Engine</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Development -->
+    <section>
+      <h2><i class="fa-solid fa-graduation-cap"></i> Currently Developing</h2>
+      <div class="learning-card">
+        <i class="fa-solid fa-compass-drafting"></i>
+        <div>
+          <strong>Autodesk Civil 3D</strong>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Expanding expertise in pipe network design, terrain modeling, and civil engineering drafting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2><i class="fa-solid fa-paper-plane"></i> Connect With Me</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Feel free to reach out for collaborations, professional opportunities, or queries regarding hydraulic modeling.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Kouamé Franck André N'Zi. Built with HTML, CSS & JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const icon = themeToggleBtn.querySelector('i');
+    
+    // Check saved theme or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      let newTheme = 'light';
+
+      if (currentTheme !== 'dark') {
+        newTheme = 'dark';
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+</body>
+</html>
