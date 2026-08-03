@@ -1,115 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Portfolio — Glassmorphism Animation</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Portfolio of Kouamé Franck André N'Zi — Water Resources & Hydraulic Drainage Systems Engineer. Specializing in HEC-RAS, HEC-HMS, EPA SWMM, and GIS applications.">
+  <title>Kouamé Franck André N'Zi | Water Resources & Hydraulic Engineer</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Ambient Animated Background Orbs -->
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <span class="logo-name">K. Franck André N'Zi</span>
+          <span class="logo-title" data-i18n="navTitle">Water Resources Engineer</span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="navAbout">Overview</a></li>
+          <li><a href="#expertise" data-i18n="navSkills">Core Expertise</a></li>
+          <li><a href="#projects" data-i18n="navProjects">Technical Projects</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+          
+          <!-- Language Selector -->
+          <li class="lang-select-wrapper">
+            <i class="fa-solid fa-globe"></i>
+            <select id="lang-select" aria-label="Select Language">
+              <option value="en" selected>EN</option>
+              <option value="fr">FR</option>
+              <option value="tr">TR</option>
+            </select>
+          </li>
 
-  <div class="container">
+          <!-- Theme Toggle -->
+          <li>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
     
-    <!-- Hero Header with Entrance Animation -->
-    <header class="hero-header">
-      <span class="hero-tag">Water Resources & Environment</span>
-      <h1 class="hero-title">Professional Experience</h1>
-      <p class="hero-subtitle">Interactive overview of technical coordination, engineering internships, and environmental initiatives.</p>
-    </header>
+    <!-- Hero / Profile Section -->
+    <section class="hero" id="about">
+      <div class="hero-badge" data-i18n="heroBadge">Integrated Water Management Specialist</div>
+      <h1 data-i18n="heroTitle">Kouamé Franck André N'Zi</h1>
+      <h2 data-i18n="heroSubtitle">Hydraulic Drainage Systems & Hydrologic Modeling Engineer</h2>
+      <p data-i18n="heroText">
+        Master’s graduate in <strong>Integrated Water Management</strong> specializing in <strong>Hydraulic Drainage Systems</strong>. Proven expertise in 1D/2D hydrodynamic simulations, urban stormwater management, watershed behavior modeling, and geospatial environmental analysis. Dedicated to engineering climate-resilient water infrastructures and mitigating flood hazards.
+      </p>
+      
+      <div class="cta-buttons">
+        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> 
+          <span data-i18n="btnEmail">Initiate Contact</span>
+        </a>
+        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-linkedin"></i> 
+          <span>LinkedIn Profile</span>
+        </a>
+      </div>
+    </section>
 
-    <!-- Interactive Glassmorphism Dashboard Cards -->
-    <main class="cards-stack">
+    <!-- Core Technical Expertise -->
+    <section id="expertise">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-layer-group"></i> <span data-i18n="skillsTitle">Technical Competencies</span></h2>
+        <p class="section-subtitle" data-i18n="skillsSub">Engineering tools, numerical modeling frameworks, and computational software.</p>
+      </div>
 
-      <!-- CARD 1 (PRESENT / ACTIVE ROLE) -->
-      <article class="glass-card">
-        <div class="card-header-flex">
-          <div>
-            <h2 class="role-title">Project Coordinator</h2>
-            <div class="company-name">Mains Unies d’Afrique • Ivory Coast (Remote)</div>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <div class="card-icon icon-blue"><i class="fa-solid fa-water"></i></div>
+          <h3 data-i18n="skillCat1">Hydrologic & Hydraulic Modeling</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>HEC-RAS (1D/2D)</strong>
+              <span data-i18n="sk1">Unsteady flow simulation, 2D floodplain inundation mapping, and dam/levee break analysis.</span>
+            </li>
+            <li>
+              <strong>HEC-HMS</strong>
+              <span data-i18n="sk2">Comprehensive watershed runoff generation, hydrograph development, and continuous flow simulation.</span>
+            </li>
+            <li>
+              <strong>EPA SWMM</strong>
+              <span data-i18n="sk3">Dynamic urban stormwater network modeling, sewer hydraulic evaluation, and LID performance assessment.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="card-icon icon-teal"><i class="fa-solid fa-earth-americas"></i></div>
+          <h3 data-i18n="skillCat2">Geospatial Analytics & Remote Sensing</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>QGIS & Spatial Analysis</strong>
+              <span data-i18n="sk4">Terrain processing (DEM/DTM), automated basin delineation, and hydro-spatial parameter extraction.</span>
+            </li>
+            <li>
+              <strong>Google Earth Engine</strong>
+              <span data-i18n="sk5">Cloud-based satellite imagery analytics, land-use classification, and environmental temporal monitoring.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="card-icon icon-indigo"><i class="fa-solid fa-microchip"></i></div>
+          <h3 data-i18n="skillCat3">Technical Computing & Documentation</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>Microsoft Excel (Advanced)</strong>
+              <span data-i18n="sk6">Hydraulic data manipulation, statistical hydrology, and automated engineering spreadsheets.</span>
+            </li>
+            <li>
+              <strong>Engineering Documentation</strong>
+              <span data-i18n="sk7">Technical report writing, executive presentations, and interdisciplinary project communication.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Engineering Projects -->
+    <section id="projects">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-diagram-project"></i> <span data-i18n="projectsTitle">Applied Engineering Projects</span></h2>
+        <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, and spatial studies.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p1Title">2D Hydrodynamic Flood Inundation Assessment</h3>
+            <p data-i18n="p1Desc">Integrated 1D/2D HEC-RAS hydrodynamic simulation to map high-risk flood zones, quantify depth-velocity hazards, and inform urban flood risk management strategies.</p>
           </div>
-          <div class="date-pill">
-            <span class="live-dot"></span>
-            May 10, 2026 – Present
+          <div class="tags">
+            <span class="tag tag-blue">HEC-RAS 1D/2D</span>
+            <span class="tag tag-teal" data-i18n="tagFlood">Flood Hazard Mapping</span>
+            <span class="tag tag-slate">Hydraulics</span>
           </div>
         </div>
-        <p class="card-description">
-          Coordinated community development projects focused on water, sanitation, and environmental sustainability. Supported comprehensive project planning, stakeholder engagement, and operational implementation.
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p2Title">Watershed Rainfall-Runoff Transformation Modeling</h3>
+            <p data-i18n="p2Desc">Hydrological watershed modeling using HEC-HMS to evaluate hydrograph responses, peak discharge timing, and basin behavior under high-intensity rainfall scenarios.</p>
+          </div>
+          <div class="tags">
+            <span class="tag tag-blue">HEC-HMS</span>
+            <span class="tag tag-teal" data-i18n="tagHydro">Catchment Hydrology</span>
+            <span class="tag tag-slate">Runoff Analysis</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p3Title">Urban Stormwater Infrastructure & Hydraulic Performance</h3>
+            <p data-i18n="p3Desc">EPA SWMM dynamic modeling of municipal drainage networks to evaluate conveyance capacity, pinpoint surcharging conduits, and propose drainage optimization measures.</p>
+          </div>
+          <div class="tags">
+            <span class="tag tag-blue">EPA SWMM</span>
+            <span class="tag tag-teal" data-i18n="tagUrban">Urban Drainage</span>
+            <span class="tag tag-slate">Stormwater</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p4Title">Geospatial Water Resource Monitoring & Analytics</h3>
+            <p data-i18n="p4Desc">Multi-temporal satellite data analysis using QGIS and Google Earth Engine to monitor hydrological features, land-cover dynamics, and surface water availability.</p>
+          </div>
+          <div class="tags">
+            <span class="tag tag-blue">QGIS</span>
+            <span class="tag tag-blue">Google Earth Engine</span>
+            <span class="tag tag-teal" data-i18n="tagGIS">Spatial Analytics</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professional Advancement -->
+    <section>
+      <div class="section-header">
+        <h2><i class="fa-solid fa-chart-line"></i> <span data-i18n="devTitle">Professional Advancement & Training</span></h2>
+      </div>
+      
+      <div class="learning-card">
+        <div class="learning-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+        <div>
+          <strong data-i18n="devHeader">Autodesk Civil 3D — Infrastructure & Pipe Network Design</strong>
+          <p data-i18n="devDesc">Currently expanding operational mastery in 3D terrain modeling, automated pipe network layout, grading optimization, and BIM-integrated civil infrastructure drafting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Engagement -->
+    <section id="contact">
+      <div class="contact-box">
+        <h2><i class="fa-solid fa-paper-plane"></i> <span data-i18n="contactTitle">Professional Engagement</span></h2>
+        <p data-i18n="contactDesc">
+          I am actively seeking engineering opportunities, research collaborations, or consulting roles focused on hydraulic modeling, urban drainage design, and water resources management.
         </p>
-        <div class="tags-wrapper">
-          <span class="skill-tag">Community Development</span>
-          <span class="skill-tag">WASH Sustainability</span>
-          <span class="skill-tag">Project Planning</span>
-          <span class="skill-tag">Remote Coordination</span>
+        <div class="cta-buttons center-buttons">
+          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> 
+            <span data-i18n="btnEmailMe">Direct Inquiry</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i class="fa-brands fa-linkedin"></i> 
+            <span>Connect on LinkedIn</span>
+          </a>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <!-- CARD 2 -->
-      <article class="glass-card">
-        <div class="card-header-flex">
-          <div>
-            <h2 class="role-title">Sewer Drainage System Implementation Intern</h2>
-            <div class="company-name">Field Working Student</div>
-          </div>
-          <div class="date-pill">Nov 2025 – Dec 2025</div>
-        </div>
-        <p class="card-description">
-          Observed and assisted in urban sewer pipeline installation processes. Supported site engineering teams with topological surveying, channel elevation controls, and real-time field coordination.
-        </p>
-        <div class="tags-wrapper">
-          <span class="skill-tag">Pipeline Installation</span>
-          <span class="skill-tag">Elevation Control</span>
-          <span class="skill-tag">Land Surveying</span>
-          <span class="skill-tag">Site Coordination</span>
-        </div>
-      </article>
+  </main>
 
-      <!-- CARD 3 -->
-      <article class="glass-card">
-        <div class="card-header-flex">
-          <div>
-            <h2 class="role-title">Intern – Plastic Waste Recycling & Reprocessing</h2>
-            <div class="company-name">Güler Plastik • Istanbul, Turkey</div>
-          </div>
-          <div class="date-pill">July 15 – Aug 26, 2024</div>
-        </div>
-        <p class="card-description">
-          Collaborated with engineering teams to optimize plastic waste recycling processes, enhancing material reprocessing efficiency and analyzing industrial waste management workflows.
-        </p>
-        <div class="tags-wrapper">
-          <span class="skill-tag">Process Optimization</span>
-          <span class="skill-tag">Plastic Reprocessing</span>
-          <span class="skill-tag">Waste Management</span>
-          <span class="skill-tag">Workflow Analysis</span>
-        </div>
-      </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; Kouamé Franck André N'Zi. <span data-i18n="footerText">All rights reserved. Water Resources Engineering Portfolio.</span></p>
+    </div>
+  </footer>
 
-      <!-- CARD 4 -->
-      <article class="glass-card">
-        <div class="card-header-flex">
-          <div>
-            <h2 class="role-title">Sanitation & Hygiene Agent</h2>
-            <div class="company-name">Adam Afrique • Sikensi, Ivory Coast</div>
-          </div>
-          <div class="date-pill">Aug 2 – Nov 10, 2018</div>
-        </div>
-        <p class="card-description">
-          Implemented rigorous sanitation protocols and public hygiene initiatives, ensuring complete compliance with health standards across diverse community settings.
-        </p>
-        <div class="tags-wrapper">
-          <span class="skill-tag">Sanitation Protocols</span>
-          <span class="skill-tag">Hygiene Programs</span>
-          <span class="skill-tag">Health Compliance</span>
-          <span class="skill-tag">Public Health</span>
-        </div>
-      </article>
-
-    </main>
-
-  </div>
-
+  <!-- Link External JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
