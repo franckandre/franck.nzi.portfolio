@@ -1,602 +1,235 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio - Ange-Paul THE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Portfolio of Kouamé Franck André N'Zi — Water Resources & Hydraulic Drainage Systems Engineer. Specializing in HEC-RAS, HEC-HMS, EPA SWMM, and GIS applications.">
+  <title>Kouamé Franck André N'Zi | Water Resources & Hydraulic Engineer</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <img src="assets/css/images/photo.jpg" alt="Photo de profil">
-        <h2>Ange-Paul Emmanuel THE</h2>
-        <p><strong>Data Analyst | Big Data Analyst | Business Analytics </strong></p>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <span class="logo-name">K. Franck André N'Zi</span>
+          <span class="logo-title" data-i18n="navTitle">Water Resources Engineer</span>
+        </a>
         
-        <div class="contact-bar">
-           
-            <a href="https://github.com/Ange-Paul-Emmanuel" target="_blank" title="GitHub" data-umami-event="contact_github">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            
-            <a href="https://linkedin.com/in/ange-paul-emmanuel-the-03a7431b4" target="_blank" title="LinkedIn" data-umami-event="contact_linkedin">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-             <a href="mailto:theange357@gmail.com" title="Email" data-umami-event="contact_email">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Theange357@gmail.com</span>
-            </a>
-        </div>
-        
-        <h4>À propos</h4> 
-        <section class="section about">
-            <p><strong>
-            Actuellement étudiant en Master 2 Big Data, Analyse et Business Intelligence à l’Université Sorbonne Paris Nord,<br>
-            je combine une solide formation en économie et statistique avec des expériences concrètes en data analysis, logistique pharmaceutique, supply chain, marketing, fonctions commerciales et Observabilité.<br>
-            Passionné par l’exploitation stratégique de la donnée, je conçois des solutions analytiques complètes, des dashboards interactifs et des automatisations data-driven afin de fiabiliser les décisions métier et accompagner la transformation numérique.<br>
-            </strong></p>
-        </section>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="navAbout">Overview</a></li>
+          <li><a href="#expertise" data-i18n="navSkills">Core Expertise</a></li>
+          <li><a href="#projects" data-i18n="navProjects">Technical Projects</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+          
+          <!-- Language Selector -->
+          <li class="lang-select-wrapper">
+            <i class="fa-solid fa-globe"></i>
+            <select id="lang-select" aria-label="Select Language">
+              <option value="en" selected>EN</option>
+              <option value="fr">FR</option>
+              <option value="tr">TR</option>
+            </select>
+          </li>
 
-        <h4>Compétences Techniques</h4>
-        <div class="skills-card">
-            <ul>
-                <li>Nettoyage et traitement de données</li>
-                <li>Visualisation de données & Dashboarding</li>
-                <li>Analyse Statistique & Probabilités</li>
-                <li>Modélisation de données</li>
-                <li>Machine Learning & IA</li>
-                <li>Reporting Stratégique</li>
-                <li>Intelligence Artificielle Générative</li>
-            </ul>
-        </div>
-
-
-        <h4>Outils & Technologies</h4>
-                <section class="section skills-tools-container">
-                    <div class="skills-group">
-                        <h5>DATA SCIENCE & ANALYSIS</h5>
-                        <div class="skills-tools">
-                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
-                            <span class="skill-tag"><i class="fa-solid fa-chart-simple"></i> R</span>
-                            <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
-                            <span class="skill-tag"><i class="fa-solid fa-chart-column"></i> Power BI</span>
-                            <span class="skill-tag"><i class="fa-solid fa-table-columns"></i> Tableau</span>
-                        </div>
-                    </div>
-                
-                    <div class="skills-group">
-                        <h5>BIG DATA</h5>
-                        <div class="skills-tools">
-                            <span class="skill-tag"><i class="fa-solid fa-cloud"></i> Databricks</span>
-                            <span class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
-                            <span class="skill-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> ELK</span>
-                            <span class="skill-tag"><i class="fa-solid fa-gauge-high"></i> Grafana</span>
-                        </div>
-                    </div>
-                
-                    <div class="skills-group">
-                        <h5>DÉVELOPPEMENT</h5>
-                        <div class="skills-tools">
-                            <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
-                            <span class="skill-tag"><i class="fa-solid fa-code"></i> VS Code</span>
-                        </div>
-                    </div>
-                </section>
-
+          <!-- Theme Toggle -->
+          <li>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="main">
-        <div class="header-main">
-            <h1 
-                <span class="animated-title">Bienvenue sur mon Portfolio</span>
-            </h1>
-            <div class="header-buttons">
-                <a href="assets/css/docs/Ange_Paul_THE_CV.pdf" class="button-inline" data-umami-event="download_CV">Télécharger mon CV </a>
-                <a href="#projects" class="button-inline" data-umami-event="clic_projet_data">Projets Data </a>
-            </div>
-        </div>
-
-        <h2 class="section-title">Expériences Professionnelles</h2>
-        <section class="section experience">
-            
-            <div class="experience-item">
-                <div class="item-header-with-logo">
-                    <img src="assets/css/images/ivalua_logo.png" alt="Logo Ivalua" class="company-logo">
-                    <div>
-                        <h3>Observability Data Analyst (Stage)</h3>
-                        <p class="company-name"><strong>IVALUA</strong> — Massy, France</p>
-                        <p class="experience-dates"><em> Département IT -- 03/2026 - 08/2026</em></p>
-                    </div>
-                </div>
-                <ul>
-                   <li><strong>Analyse & Diagnostic :</strong> Analyse des métric, logs systèmes et applicatifs pour identifier les problèmes potentiels sur la solution <strong>Ivalua Buyer</strong> et résolution d'incidents complexes.</li>
-                    <li><strong>Monitoring & Alerting :</strong> Configuration et mise à disposition de tableaux de bord dynamiques et d'alertes de monitoring applicatif pour garantir la visibilité opérationnelle.</li>
-                    <li><strong>Innovation LLM :</strong> Développement et intégration d'agents LLM pour l'analyse automatisée de logs et l'aide au diagnostic.</li>
-                    <li><strong>Fiabilité & Performance :</strong> Application des meilleures pratiques d'observabilité pour maximiser la disponibilité et la fiabilité des systèmes de production.</li>
-                    <li><strong>Communication :</strong> Coordination et communication transverse avec les parties prenantes internes sur le suivi et la résolution des problèmes en cours.</li>
-                </ul>
-                <p><strong>Outils :</strong> Python, SQL Server, Grafana, Datadog</p>
-            </div>
-            
-            <div class="experience-item">
-                <div class="item-header-with-logo">
-                    <img src="assets/css/images/image-high.png" class="company-logo" alt="Logo EcoVerta">
-                    <div>
-                        <h3>Consultant Data (Projet Tutoré EcoVertaConsul’t X Université Paris 13)</h3>
-                        <p class="company-name"><strong>EcoVertaConsul’t</strong> — Paris et périphérie, France</p>
-                        <p class="experience-dates"><em>10/2025 – 02/2026</em></p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Extraction et exploitation de données publiques et énergétiques (INSEE, ADEME, IGN, cadastre solaire).</li>
-                    <li>Développement d’un modèle de scoring clients ENR (0–100) pour prioriser les opportunités commerciales (Loi APER).</li>
-                    <li>Conception de dashboards Power BI avec cartographie interactive pour l’aide à la décision.</li>
-                </ul>
-                
-                <p><strong>Outils :</strong> Python, Power BI</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="item-header-with-logo">
-                    <img src="assets/css/images/aliive_logo.png" class="company-logo" alt="Logo EcoVerta">
-                    <div>
-                        <h3>Data Analyst (Stagiaire)</h3>
-                        <p class="company-name"><strong>Aliive</strong> — Neuilly-sur-Seine, France</p>
-                        <p class="experience-dates"><em>Pôle Acquisition et Commercial -- 05/2025 - 08/2025</em></p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Analyse de données multi-sources (CRM, campagnes, données commerciales).</li>
-                    <li>Mise en place et suivi des KPI de performance marketing (CPA, CPC, CPV, taux de recrutement).</li>
-                    <li>Création de dashboards Power BI interactifs pour le suivi opérationnel et décisionnel.</li>
-                    <li>Automatisation de reporting : réduction du temps de 4 jours → 2 jours.</li>
-                    <li>Contribution à la stratégie digitale (campagnes d’influence & SEO).</li>
-                    
-                </ul>
-                <p><strong>Outils :</strong> Power BI, Excel, Google Ads, Meta</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="item-header-with-logo">
-                    <img src="assets/css/images/NPSP.png" class="company-logo" alt="Logo EcoVerta">
-                    <div>
-                        <h3>Data Analyst Assistant Acheteur (Stage)</h3>
-                        <p class="company-name"><strong>Nouvelle Pharmacie de la Santé Publique de Côte d’Ivoire NPSP</strong> — Abidjan, Côte d’Ivoire</p>
-                        <p class="experience-dates"><em>Direction Logistique Pharmaceutique — Service Achats -- 11/2022 - 08/2023</em></p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Extraction, nettoyage et analyse de données.</li>
-                    <li>Création, calcul et suivi d’indicateurs clés (prix, stock, disponibilité, délais).</li>
-                    <li>Conception de dashboards Power BI.</li>
-                    <li>Automatisation et optimisation des processus achat.</li>
-                    <li>Documentation hebdomadaire et recommandations stratégiques.</li>
-                </ul>
-                <p><strong>Outils :</strong> SQL, Power BI, Excel, Access</p>
-            </div>
-        </section>
-
-        <h2 class="section-title" id="projects-title">Projets Data</h2>
-        <section class="section project" id="projects">
-
-            <div class="project-item">
-                <h3><a href="https://github.com/Ange-Paul-Emmanuel/Classic-Models-Analysis-SQL-DataViz-" target="_blank" data-umami-event="title_Classic_M">Classic Models – Analyse commerciale et optimisation des ventes</a> (SQL & Power BI)</h3>
-
-                <img src="assets/css/images/dash_classic.png" alt="Aperçu du Dashboard Classic Models Power BI" class="project-image">
-                
-                <p class="description">
-                    <strong>Contexte & Objectif :</strong> Analyser et optimiser les opérations commerciales d’une entreprise de vente de modèles réduits afin de détecter les tendances clés, comprendre la dynamique des ventes et améliorer la performance des employés.
-                </p>
-                
-                <ul class="project-details">
-                    <li>
-                        <strong>Méthodes :</strong> Analyse multidimensionnelle (produits, commandes, clients, employés) via requêtes SQL. 
-                        <br>Connexion de la base de données SQL à Power BI pour la modélisation et la création d'un Tableau de bord interactif de suivi des KPIs.
-                    </li>
-                    <li>
-                        <strong>Résultats Clés & Impact :</strong> Ce travail a permis d'identifier rapidement les produits phares et les zones stratégiques, de suivre la performance commerciale ainsi que la dynamique des stocks et la charge de travail des employés. 
-                        <br>Le Dashboard Power BI opérationnel fournit aux managers un outil de suivi en temps réel pour des décisions stratégiques rapides.
-                    </li>
-                </ul>
-                
-                <p class="technologies">
-                    <strong>Outils :</strong> SQL, Power BI
-                </p>
-
-                <a href="https://github.com/Ange-Paul-Emmanuel/Classic-Models-Analysis-SQL-DataViz-" target="_blank" class="button-project" data-umami-event="button_github_Classic_M">Voir le projet détaillé →</a>
-            </div>
-            
-            <div class="project-item">
-                <h3>
-                    <a href="https://github.com/Ange-Paul-Emmanuel/Prediction-du-Churn-Bancaire" target="_blank" data-umami-event="title_churn">Prédiction du Churn Bancaire</a> (Python : Scikit-learn)
-                </h3>
-                
-                <img src="assets/css/images/churn_distribution.png" alt="Distribution des clients Churn" class="project-image">
-                
-                <p class="description">
-                    <strong>Contexte & Objectif :</strong> Anticiper le départ des clients bancaires (churn) afin de mettre en place des actions de fidélisation ciblées et optimiser les campagnes marketing.
-                </p>
-                
-                <ul class="project-details">
-                    <li>
-                        <strong>Méthodes :</strong> Prétraitement des données (encodage, standardisation, gestion du déséquilibre des classes). 
-                        <br>Comparaison de modèles (Régression Logistique, Random Forest). Modèle final : </strong>Random Forest</strong> optimisé avec hyperparamètres ajustés et sur-échantillonnage de la classe churner(minoritaire).
-                        <br>
-                    </li>
-                    <li>
-                        <strong>Résultats Clés & Impact :</strong> </strong>Accuracy de 86%</strong> ; F1-score sur les clients à risque (churners) de </strong>62%</strong>. 
-                    
-                        <br>Ce modèle permet l'identification des clients les plus à risque, améliorant la rétention client grâce à des actions marketing ciblées.
-                    </li>
-                </ul>
-
-                <p class="technologies">
-                    <strong>Outils :</strong> Python : Pandas, Matplotlib, Scikit-learn
-                </p>
-                
-                <a href="https://github.com/Ange-Paul-Emmanuel/Prediction-du-Churn-Bancaire" class="button-project" data-umami-event="button_github_churn">Voir le projet détaillé →</a>
-
-            </div>
-
-            
-            <div class="project-item">
-                <h3>
-                    <a href="https://github.com/Ange-Paul-Emmanuel/Segmentation-Client" target="_blank" data-umami-event="title_segmentation">Segmentation Client</a> (Python : Scikit-learn)
-                </h3>
-                
-                <img src="assets/css/images/segmentation_clusters.png" alt="Visualisation des clusters de segmentation client" class="project-image">
-                
-                <p class="description">
-                    <strong>Contexte & Objectif :</strong> Identifier des groupes de clients distincts pour optimiser les campagnes marketing et améliorer la fidélisation dans un environnement retail.
-                </p>
-                
-                <ul class="project-details">
-                    <li>
-                        <strong>Méthodes :</strong> Prétraitement des données. Analyse </strong>RFM</strong> (Récence, Fréquence, Montant) et </strong>ACP</strong> (Analyse en Composantes Principales). 
-                        <br>Clustering non supervisée par l'algorithme </strong>K-Means</strong>.
-                    
-                    </li>
-                    <li>
-                        <strong>Résultats Clés & Impact :</strong> Définition de </strong>4 segments clients</strong> (Inactifs, Actifs de classe moyenne, VIP/Champions, Anciens peu engagés). 
-                        <br>Analyse des comportements et recommandations spécifiques pour chaque segment.
-                        <br>Impact : Fournit une base solide pour des stratégies marketing personnalisées, un ciblage précis et des campagnes de fidélisation efficaces.
-                    </li>
-                </ul>
-        
-                <p class="technologies">
-                    <strong>Outils :</strong> Python : Pandas, Matplotlib, Scikit-learn(PCA, KMeans)
-                </p>
-                
-                <a href="https://github.com/Ange-Paul-Emmanuel/Segmentation-Client" class="button-project" data-umami-event="button_github_segmentation">Voir le projet détaillé →</a>
-
-        </div>
-
-        <div class="project-item">
-            <h3>
-                <a href="https://github.com/Ange-Paul-Emmanuel/Tableau_de_bord_GRH/tree/main" target="_blank" data-umami-event="title_GRH">Tableau de bord RH – Gestion des Ressources Humaines</a> (Power BI)
-            </h3>
-            
-            <img src="assets/css/images/Page 1.png" alt="Aperçu du Tableau de bord RH Power BI" class="project-image">
-            
-            <p class="description">
-                <strong>Contexte & Objectif :</strong> Développement d’un dashboard interactif RH pour centraliser et visualiser les informations clés des collaborateurs, afin de faciliter la prise de décision stratégique RH.
-            </p>
-            
-            <ul class="project-details">
-                <li>
-                    <strong>Méthodes & Outils :</strong> Power BI pour les visualisations interactives. Utilisation de Python et Excel pour le traitement des données et la génération d’images fictives.
-                    
-                </li>
-                <li>
-                    <strong>Résultats Clés & Impact :</strong> KPIs principaux affichés : effectif total, répartition H/F, promotions, départs à la retraite, performance et satisfaction. Le dashboard est interactif, permettant une exploration par employé et département.
-                    <br>Outil simple et visuel pour piloter les données RH et soutenir les décisions stratégiques sans nécessiter de compétences techniques avancées.
-                </li>
-            </ul>
-
-            <p class="technologies">
-                    <strong>Outils :</strong> Power BI, Excel, Python
-            </p>
-            
-            <a href="https://github.com/Ange-Paul-Emmanuel/Tableau_de_bord_GRH/tree/main" class="button-project" data-umami-event="button_github_GRH">Voir le projet détaillé →</a>
-        </div>
-
-        <div class="project-item">
-            <h3>
-                <a href="https://github.com/Ange-Paul-Emmanuel/THE-SQLer-Streamlit-App/tree/master" target="_blank" data-umami-event="title_SQLer">THE SQLer – Agent IA pour requêtes SQL et visualisations</a> (Python, Groq, Llama-3.1 & Streamlit)
-            </h3>
-            
-            <img src="assets/css/images/the sqler.png" alt="Aperçu de l'agent THE SQLer" class="project-image">
-            
-            <p class="description">
-                <strong>Contexte & Objectif :</strong> Développer une application interactive et rapide pour permettre aux utilisateurs d'interroger une base de données MySQL en langage naturel et obtenir des visualisations automatisées.
-                THE SQLer vise à démocratiser l’accès aux données et un grain de productivité grâce aux outils d'IA générative.
-            </p>
-            
-            <ul class="project-details">
-                <li>
-                    <strong>Méthodes :</strong> Base de données MySQL (Classicmodels). Utilisation du modèle IA Llama-3.1-8b via Groq pour générer et exécuter les requêtes SQL. 
-                    Visualisations automatiques avec matplotlib. Application web développée avec Streamlit.
-                    THE SQLer vise à démocratiser l’accès aux données.
-                </li>
-                <li>
-                    <strong>Résultats Clés & Impact :</strong> Conversion réussie des questions en langage naturel en requêtes SQL optimisées. Affichage des résultats sous forme de tableaux et graphiques dynamiques. 
-                    Export des données et visualisations pour usage métier. Accélération de la prise de décision et simplification de l’analyse pour les non-experts.
-                </li>
-            </ul>
-
-            <p class="technologies">
-                    <strong>Outils :</strong> MySQL, Python, sqlalchemy, Groq, Llama-3.1 & Streamlit
-            </p>
-            
-            <a href="https://github.com/Ange-Paul-Emmanuel/THE-SQLer-Streamlit-App/tree/master" class="button-project" data-umami-event="button_github_SQLer">Voir l'app en démo →</a>
-        </div>
-
-        <div class="project-item">
-            <h3>
-                <a href="https://github.com/Ange-Paul-Emmanuel/Analyse-croissance-economique-en-France" target="_blank" data-umami-event="title_croissance">Prédiction de la croissance économique en France (1960–2023)</a> (Python : Séries temporelles)
-            </h3>
-            
-            <img src="assets/css/images/croissance.png" alt="Analyse des séries temporelles de croissance économique" class="project-image">
-            
-            <p class="description">
-                <strong>Contexte & Objectif :</strong> Projet académique visant à prévoir le PIB par habitant en France à partir d’indicateurs démographiques et macroéconomiques, et à identifier les facteurs déterminants de la croissance.
-            </p>
-            
-            <ul class="project-details">
-                <li>
-                    <strong>Méthodes :</strong> Analyse exploratoire des variables macroéconomiques. Modèles de régression multiple. Utilisation des séries temporelles via le modèle SARIMAX.
-                    
-                </li>
-                <li>
-                    <strong>Résultats Clés & Impact :</strong> La démographie seule n’explique pas la croissance. L’investissement (FBCF) et le taux d’épargne sont identifiés comme les meilleurs prédicteurs du PIB.
-                    Utilisation des modèles prédictifs pour l’analyse économique et la prise de décision basée sur des données macroéconomiques.
-                </li>
-            </ul>
-
-            <p class="technologies">
-                    <strong>Outils :</strong> Python : Scikit-learn, Statsmodels, Pandas
-            </p>
-            
-            <a href="https://github.com/Ange-Paul-Emmanuel/Analyse-croissance-economique-en-France" class="button-project" data-umami-event="button_github_croissance">Voir le projet détaillé →</a>
-        </div>
-
-        <div class="project-item">
-            <h3>
-                <a href="https://github.com/Ange-Paul-Emmanuel/Green-Paris-Visualisation-des-arbres-plant-s-Paris" target="_blank" data-umami-event="title_green_paris">Green Paris : Visualisation des arbres plantés à Paris</a> (Excel & Power BI)
-            </h3>
-            
-            <img src="assets/css/images/Green Paris dash.png" alt="Aperçu du Tableau de bord Green Paris" class="project-image">
-            
-            <p class="description">
-                <strong>Contexte & Objectif :</strong> Création d'un tableau de bord interactif pour présenter la répartition et l’évolution des arbres plantés à Paris à partir des données ouvertes, mettant en valeur l'engagement environnemental de la Ville.
-            </p>
-            
-            <ul class="project-details">
-                <li>
-                    <strong>Méthodes & Outils :</strong> Collecte et préparation des données Open Data (CSV). Power BI pour la création du tableau de bord (visualisation, filtrage, cartographie interactive).
-                    <br>
-                    Outils : Excel & Power BI
-                </li>
-                <li>
-                    <strong>Résultats Clés & Impact :</strong> Affichage des indicateurs clés (nombre total d’arbres, projets réalisés, aire moyenne). Cartographie interactive et classement des Top 5 arrondissements.
-                    <br>Impact : Outil d'analyse visuelle claire et synthétique facilitant l’identification des zones les plus actives en termes de projets de végétalisation pour la prise de décision.
-                </li>
-            </ul>
+  <main class="container">
     
-        <a href="https://github.com/Ange-Paul-Emmanuel/Green-Paris-Visualisation-des-arbres-plant-s-Paris" class="button-project" data-umami-event="button_github_green_paris">Voir le projet détaillé →</a>
-        </div>
+    <!-- Hero / Profile Section -->
+    <section class="hero" id="about">
+      <div class="hero-badge" data-i18n="heroBadge">Integrated Water Management Specialist</div>
+      <h1 data-i18n="heroTitle">Kouamé Franck André N'Zi</h1>
+      <h2 data-i18n="heroSubtitle">Hydraulic Drainage Systems & Hydrologic Modeling Engineer</h2>
+      <p data-i18n="heroText">
+        Master’s graduate in <strong>Integrated Water Management</strong> specializing in <strong>Hydraulic Drainage Systems</strong>. Proven expertise in 1D/2D hydrodynamic simulations, urban stormwater management, watershed behavior modeling, and geospatial environmental analysis. Dedicated to engineering climate-resilient water infrastructures and mitigating flood hazards.
+      </p>
+      
+      <div class="cta-buttons">
+        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="btnEmail">Initiate Contact</span></a>
+        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+      </div>
+    </section>
 
-        <div class="project-item">
-            <h3>
-                <a href="https://github.com/Ange-Paul-Emmanuel/Velib-Metropole-Real-Time-DataViz" target="_blank" data-umami-event="title_velib">Vélib’ Métropole – Real-Time Data Visualization Dashboard</a> (Power BI & Open Data API)
-            </h3>
-            
-            <img src="assets/css/images/Vélib dash.png" alt="Aperçu du Tableau de bord Vélib’ Métropole" class="project-image">
-            
-            <p class="description">
-                <strong>Contexte & Objectif :</strong> Concevoir un tableau de bord interactif Power BI basé sur l’API officielle de Vélib’ Métropole pour visualiser en temps réel la disponibilité, la capacité et le taux d’occupation des stations dans la métropole parisienne.
-            </p>
-            
-            <ul class="project-details">
-                <li>
-                    <strong>Méthodes & Outils :</strong> Connexion à l'API GBFS (General Bikeshare Feed Specification). Calcul du taux d’occupation en temps réel. Création d'une carte interactive avec code couleur (mécanique/électrique) et intégration de liens Google Maps.
-                    <br>
-                    Outils : Power BI
-                </li>
-                <li>
-                    <strong>Résultats Clés & Impact :</strong> Dashboard interactif affichant le taux d’occupation global, le nombre total de vélos et la répartition mécanique/électrique. Expérimentation réussie d'une approche de Real-Time Data Visualization sur des données externes.
-                    <br>Impact : Outil dynamique d'aide à la décision et à l'information pour les usagers et les gestionnaires du service Vélib’.
-                </li>
-            </ul>
-            
-            <a href="https://github.com/Ange-Paul-Emmanuel/Velib-Metropole-Real-Time-DataViz" class="button-project" data-umami-event="button_github_velib">Voir le projet détaillé →</a>
-        </div>
+    <!-- Core Technical Expertise -->
+    <section id="expertise">
+      <div class="section-header">
+        <h2 data-i18n="skillsTitle"><i class="fa-solid fa-layer-group"></i> Technical Competencies</h2>
+        <p class="section-subtitle" data-i18n="skillsSub">Engineering tools, numerical modeling frameworks, and computational software.</p>
+      </div>
 
-        <div class="project-item">
-            <h3>
-                <a href="https://github.com/Ange-Paul-Emmanuel/Performance_environnementale_EUROSTOXX600" target="_blank" data-umami-event="title_euro_stock">Analyse de la performance environnementale – EURO STOXX600</a> (R/Rstudio)
-            </h3>
-            
-            <img src="assets/css/images/Rplot.png" alt="Graphique de l'analyse RSE/ESG" class="project-image">
-            
-            <p class="description">
-                <strong>Contexte & Objectif :</strong> Identifier les facteurs déterminants de la performance environnementale des entreprises cotées sur l’EURO STOXX600 et comprendre pourquoi certaines sont plus performantes que d’autres.
-            </p>
-            
-            <ul class="project-details">
-                <li>
-                    <strong>Méthodes :</strong> Analyse exploratoire des données ESG. Réduction de dimension via ACP (Analyse en Composantes Principales). Modélisation statistique par régression linéaire.
-                
-                </li>
-                <li>
-                    <strong>Résultats Clés & Impact :</strong> Identification des variables ESG les plus influentes et mise en évidence des écarts de performance entre secteurs.
-                    <br>Ce projet se situe à l’intersection de la finance durable et de la data science, fournissant des insights exploitables pour la stratégie RSE des entreprises.
-                </li>
-            </ul>
-
-            <p class="technologies">
-                    <strong>Outils :</strong> R, RStudio
-            </p>
-            
-            <a href="https://github.com/Ange-Paul-Emmanuel/Performance_environnementale_EUROSTOXX600" class="button-project" data-umami-event="button_github_euro_stock">Voir le projet détaillé →</a>
-        </div>
-
-        <div class="project-item">
-                <h3>
-                    <a href="https://github.com/Ange-Paul-Emmanuel/blood_pressure_obersavability_docker_project" target="_blank" data-umami-event="title_AVC">Observabilité & Monitoring Temps Réel des Signaux Vitaux par IA</a> (Python, Kafka, Docker & ELK)
-                </h3>
-                
-                <img src="assets/css/images/blood_pressure_project.png" alt="Aperçu du pipeline de monitoring AVC" class="project-image">
-                
-                <p class="description">
-                    <strong>Contexte & Objectif :</strong> Anticiper et détecter en temps réel les épisodes cliniques à risque d'AVC à partir de flux continus de mesures physiologiques. 
-                    L'objectif est de générer des alertes précoces et d'alimenter un tableau de bord de supervision pour permettre aux cliniciens une prise de décision rapide et vitale.
-                </p>
-                
-                <ul class="project-details">
-                    <li>
-                        <strong>Méthodes :</strong> Ingestion de flux continus via Apache Kafka pour simuler une surveillance hospitalière. 
-                        Conteneurisation de l'architecture (Broker, Zookeeper, Producers) sous Docker. 
-                        Feature engineering sur séries temporelles (fenêtrage glissant) et inférence via un modèle Random Forest optimisé. 
-                        Indexation haute performance dans Elasticsearch couplée à un Agent IA (LLM) pour la génération automatique de synthèses médicales textuelles basées sur l'état instantané du patient.
-                    </li>
-                    <li>
-                        <strong>Résultats Clés & Impact :</strong> Pipeline complet fonctionnel (Simulateur → Kafka → ML & Agent IA → ELK). 
-                        Visualisation dynamique des alertes sous Kibana permettant de prioriser les patients à haut risque. 
-                        Solution opérationnelle démontrant une maîtrise des architectures data-streaming et du MLOps pour le secteur de la santé.
-                    </li>
-                </ul>
-            
-                <p class="technologies">
-                    <strong>Outils :</strong> Python, Kafka, Docker, Elasticsearch, Kibana, Scikit-learn & Pandas
-                </p>
-                
-                <a href="https://github.com/Ange-Paul-Emmanuel/blood_pressure_obersavability_docker_project" class="button-project" data-umami-event="button_github_AVC">Voir le projet sur GitHub →</a>
-        </div>
+      <div class="skills-grid">
         
-            
-        </section>
-
-        <h2 class="section-title">Certifications</h2>
-        <section class="section certif">
-            <ul class="certif-list">
-
-        <li class="certif-item">
-            <div class="certif-info">
-                <i class="fa-solid fa-robot certif-icon"></i>
-                <div class="certif-text">
-                    <span class="certif-title">Generative AI Practitioner Certificate</span>
-                    <span class="certif-date">Dataiku — Mai 2026</span>
-                </div>
-            </div>
-            <div class="certif-actions">
-                <a href="https://verify.skilljar.com/c/m76s4uy4t7we" target="_blank" class="certif-link">
-                    <i class="fa-solid fa-file-pdf"></i> Voir le Certificat
-                </a>
-                <a href="https://verify.skilljar.com/c/bb5xafajmk4u" target="_blank" class="verification-sticker">
-                    <i class="fa-solid fa-circle-check"></i> Authenticité
-                </a>
-            </div>
-        </li>
-                
-        <li class="certif-item">
-                    <div class="certif-info">
-                        <i class="fa-solid fa-brain certif-icon"></i> 
-                        <div class="certif-text">
-                            <span class="certif-title">Intelligence Artificielle (FORCE-N & Mastercard Foundation)</span>
-                            <span class="certif-date">Université Cheikh Hamidou Kane — Mars 2024</span>
-                        </div>
-                    </div>
-                    <div class="certif-actions">
-                        <a href="assets/css/docs/Certificat FORCE N IA.pdf" target="_blank" class="certif-link">
-                            <i class="fa-solid fa-file-pdf"></i> Voir le Certificat
-                        </a>
-                        <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&code=ihGAVFzWEH&qrcode=1" target="_blank" class="verification-sticker">
-                            <i class="fa-solid fa-circle-check"></i> Authenticité
-                        </a>
-                    </div>
-                </li>   
-
-        <li class="certif-item">
-                <div class="certif-info">
-                    <i class="fa-solid fa-brain certif-icon"></i>
-                    <div class="certif-text">
-                        <span class="certif-title">ML Practitioner Certificate</span>
-                        <span class="certif-date">Dataiku — Mai 2026</span>
-                    </div>
-                </div>
-                <div class="certif-actions">
-                    <a href="https://verify.skilljar.com/c/aqj974kigrxq" target="_blank" class="certif-link">
-                        <i class="fa-solid fa-file-pdf"></i> Voir le Certificat
-                    </a>
-                    <a href="https://verify.skilljar.com/c/m76s4uy4t7we" target="_blank" class="verification-sticker">
-                        <i class="fa-solid fa-circle-check"></i> Authenticité
-                    </a>
-                </div>
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-water"></i></div>
+          <h3 data-i18n="skillCat1">Hydrologic & Hydraulic Modeling</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>HEC-RAS (1D/2D)</strong>
+              <span data-i18n="sk1">Unsteady flow simulation, 2D floodplain inundation mapping, and dam/levee break analysis.</span>
             </li>
-                
-              <li class="certif-item">
-                <div class="certif-info">
-                    <i class="fa-solid fa-pen-ruler certif-icon"></i>
-                    <div class="certif-text">
-                        <span class="certif-title">Advanced Designer Certificate</span>
-                        <span class="certif-date">Dataiku — Mai 2026</span>
-                    </div>
-                </div>
-                <div class="certif-actions">
-                    <a href="https://verify.skilljar.com/c/bb5xafajmk4u" target="_blank" class="certif-link">
-                        <i class="fa-solid fa-file-pdf"></i> Voir le Certificat
-                    </a>
-                    <a href="https://verify.skilljar.com/c/aqj974kigrxq" target="_blank" class="verification-sticker">
-                        <i class="fa-solid fa-circle-check"></i> Authenticité
-                    </a>
-                </div>
+            <li>
+              <strong>HEC-HMS</strong>
+              <span data-i18n="sk2">Comprehensive watershed runoff generation, hydrograph development, and continuous flow simulation.</span>
             </li>
+            <li>
+              <strong>EPA SWMM</strong>
+              <span data-i18n="sk3">Dynamic urban stormwater network modeling, sewer hydraulic evaluation, and LID performance assessment.</span>
+            </li>
+          </ul>
+        </div>
 
-            
-                <li class="certif-item">
-                    <div class="certif-info">
-                        <i class="fa-solid fa-database certif-icon"></i> 
-                        <div class="certif-text">
-                            <span class="certif-title">Traitement de données (FORCE-N & Mastercard Foundation)</span>
-                            <span class="certif-date">Université Cheikh Hamidou Kane — Août 2024</span>
-                        </div>
-                    </div>
-                    <div class="certif-actions">
-                        <a href="assets/css/docs/Certificat_FORCE_N TD.pdf" target="_blank" class="certif-link">
-                            <i class="fa-solid fa-file-pdf"></i> Voir le Certificat
-                        </a>
-                        <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=251394&code=q8HUa672Dt&qrcode=1" target="_blank" class="verification-sticker">
-                            <i class="fa-solid fa-circle-check"></i> Authenticité
-                        </a>
-                    </div>
-                </li>
-            
-            <li class="certif-item">
-                    <div class="certif-info">
-                        <i class="fa-solid fa-graduation-cap certif-icon"></i> 
-                        <div class="certif-text">
-                            <span class="certif-title">Dataiku Core Designer (Dataiku)</span>
-                            <span class="certif-date">Janvier 2026</span>
-                        </div>
-                    </div>
-                    <div class="certif-actions">
-                        <a href="https://verify.skilljar.com/c/92s3xp229o9p" target="_blank" class="certif-link">
-                            <i class="fa-solid fa-file-pdf"></i> Voir le Certificat
-                        </a>
-                        <a href="https://verify.skilljar.com/c/92s3xp229o9p" target="_blank" class="verification-sticker">
-                            <i class="fa-solid fa-circle-check"></i> Authenticité
-                        </a>
-                    </div>
-                </li>
-            
-    
-            
-            </ul>
-        </section>
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <h3 data-i18n="skillCat2">Geospatial Analytics & Remote Sensing</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>QGIS & Spatial Analysis</strong>
+              <span data-i18n="sk4">Terrain processing (DEM/DTM), automated basin delineation, and hydro-spatial parameter extraction.</span>
+            </li>
+            <li>
+              <strong>Google Earth Engine</strong>
+              <span data-i18n="sk5">Cloud-based satellite imagery analytics, land-use classification, and environmental temporal monitoring.</span>
+            </li>
+          </ul>
+        </div>
 
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3 data-i18n="skillCat3">Technical Computing & Documentation</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>Microsoft Excel (Advanced)</strong>
+              <span data-i18n="sk6">Hydraulic data manipulation, statistical hydrology, and automated engineering spreadsheets.</span>
+            </li>
+            <li>
+              <strong>Engineering Documentation</strong>
+              <span data-i18n="sk7">Technical report writing, executive presentations, and interdisciplinary project communication.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Engineering Projects -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 data-i18n="projectsTitle"><i class="fa-solid fa-diagram-project"></i> Applied Engineering Projects</h2>
+        <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, and spatial studies.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p1Title">2D Hydrodynamic Flood Inundation Assessment</h3>
+            <p data-i18n="p1Desc">Integrated 1D/2D HEC-RAS hydrodynamic simulation to map high-risk flood zones, quantify depth-velocity hazards, and inform urban flood risk management strategies.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">HEC-RAS 1D/2D</span>
+            <span class="tag" data-i18n="tagFlood">Flood Hazard Mapping</span>
+            <span class="tag">Hydraulics</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p2Title">Watershed Rainfall-Runoff Transformation Modeling</h3>
+            <p data-i18n="p2Desc">Hydrological watershed modeling using HEC-HMS to evaluate hydrograph responses, peak discharge timing, and basin behavior under high-intensity rainfall scenarios.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">HEC-HMS</span>
+            <span class="tag" data-i18n="tagHydro">Catchment Hydrology</span>
+            <span class="tag">Runoff Analysis</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p3Title">Urban Stormwater Infrastructure & Hydraulic Performance</h3>
+            <p data-i18n="p3Desc">EPA SWMM dynamic modeling of municipal drainage networks to evaluate conveyance capacity, pinpoint surcharging conduits, and propose drainage optimization measures.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">EPA SWMM</span>
+            <span class="tag" data-i18n="tagUrban">Urban Drainage</span>
+            <span class="tag">Stormwater</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p4Title">Geospatial Water Resource Monitoring & Analytics</h3>
+            <p data-i18n="p4Desc">Multi-temporal satellite data analysis using QGIS and Google Earth Engine to monitor hydrological features, land-cover dynamics, and surface water availability.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">QGIS</span>
+            <span class="tag">Google Earth Engine</span>
+            <span class="tag" data-i18n="tagGIS">Spatial Analytics</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professional Advancement -->
+    <section>
+      <div class="section-header">
+        <h2 data-i18n="devTitle"><i class="fa-solid fa-chart-line"></i> Professional Advancement & Training</h2>
+      </div>
+      
+      <div class="learning-card">
+        <div class="learning-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+        <div>
+          <strong data-i18n="devHeader">Autodesk Civil 3D — Infrastructure & Pipe Network Design</strong>
+          <p data-i18n="devDesc">Currently expanding operational mastery in 3D terrain modeling, automated pipe network layout, grading optimization, and BIM-integrated civil infrastructure drafting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Engagement -->
+    <section id="contact">
+      <div class="contact-box">
+        <h2 data-i18n="contactTitle">Professional Engagement</h2>
+        <p data-i18n="contactDesc">
+          I am actively seeking engineering opportunities, research collaborations, or consulting roles focused on hydraulic modeling, urban drainage design, and water resources management.
+        </p>
+        <div class="cta-buttons center-buttons">
+          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> <span data-i18n="btnEmailMe">Direct Inquiry</span></a>
+          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; Kouamé Franck André N'Zi. <span data-i18n="footerText">All rights reserved. Water Resources Engineering Portfolio.</span></p>
     </div>
-    <script src="https://cdn.counter.dev/script.js" data-id="4b0a619c-5855-42f7-97cb-d5fd0fcfdb33" data-utcoffset="2"></script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="1e788c97-e4e6-4ac6-a7db-1bfcafcf1691"></script>
+  </footer>
+
+  <!-- Link External JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
