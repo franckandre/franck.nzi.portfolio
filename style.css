@@ -1,314 +1,551 @@
-:root {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --accent-color: #0284c7;
-  --accent-hover: #0369a1;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --code-bg: #f1f5f9;
+/* ===== Style global et Améliorations UX ===== */
+html {
+    scroll-behavior: smooth;
+}
+body { 
+    background-color: #f9fbff;
+    color: #1a1a1a;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
 }
 
-[data-theme="dark"] {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-card: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --accent-color: #38bdf8;
-  --accent-hover: #0ea5e9;
-  --border-color: #334155;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  --code-bg: #0f172a;
+/* ===== Liens (Général) ===== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+/* #######################################
+
+/* ************************************** */
+/* TITRE BIENVENUE : TAILLE ET DYNAMISME */
+/* ************************************** */
+.animated-title {
+    /* Augmentation de la taille */
+    font-size: 3.2em; 
+    font-weight: 900;
+    margin: 0;
+    
+    /* Effet de couleur dégradée */
+    background: linear-gradient(90deg, #003366, #0066cc, #00b3ff, #003366);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Double animation : Couleurs + Mouvement */
+    animation: 
+        shine 4s linear infinite, 
+        floatContinuous 3s ease-in-out infinite;
+    
+    display: inline-block;
+    letter-spacing: -1px; /* Pour un look plus moderne/compact */
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  padding-bottom: 3rem;
+/* Animation des couleurs (défilement) */
+@keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
 }
 
-/* Container */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+/* Animation de mouvement (flottement fluide) */
+@keyframes floatContinuous {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Le titre monte de 10px */
+    }
 }
 
-/* Header & Navigation */
-header {
-  background-color: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: var(--shadow-sm);
+/* Ajustement pour le header-main pour éviter que le titre ne touche le haut */
+.header-main {
+    padding: 30px 0; /* Plus d'espace pour laisser respirer le gros titre */
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
+/* ************************************** */
+/* RESPONSIVE : Titre plus petit sur mobile */
+/* ************************************** */
+@media (max-width: 900px) {
+    .animated-title {
+        font-size: 2em; /* Réduction pour éviter que ça dépasse sur téléphone */
+    }
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--accent-color);
-  text-decoration: none;
+/* ************************************** */
+/* BOUTONS AVEC CADRE (HEADER & PROJETS) */
+/* ************************************** */
+
+/* Style pour les boutons du haut (CV & Projets Data) */
+.header-buttons a.button-inline {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    
+    /* Le Cadre */
+    background: transparent;           /* Fond transparent */
+    color: #0066cc;                    /* Texte bleu */
+    border: 2px solid #0066cc;         /* Contour bleu */
+    
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;         /* Animation fluide */
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  list-style: none;
+/* Effet au survol (Remplissage) */
+.header-buttons a.button-inline:hover {
+    background: #0066cc;               /* Le fond devient bleu */
+    color: white;                      /* Le texte devient blanc */
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3); /* Ombre portée */
+    transform: translateY(-2px);       /* Petit soulèvement */
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-weight: 500;
-  font-size: 0.95rem;
+/* Style pour le bouton "Voir le projet détaillé" */
+.project-item .button-project {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-top: 15px;
+    
+    /* Le Cadre */
+    background: white;
+    color: #003366;
+    border: 2px solid #003366;         /* Contour plus foncé pour les projets */
+    
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: var(--accent-color);
+/* Effet au survol (Remplissage) */
+.project-item .button-project:hover {
+    background: #003366;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
 }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--text-secondary);
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.5rem;
+/* Optionnel : Supprimer l'ancienne animation wave si elle existe encore */
+.main .animated-title {
+    animation: shine 3s linear infinite; /* On remplace wave par shine */
 }
 
-/* Hero Section */
-.hero {
-  padding: 5rem 0 3rem;
-  text-align: left;
+/* ################################### */
+
+/* ===== Titres (Général) ===== */
+h1, h2, h3, h4 {
+    color: #003366;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+/* ===== Sidebar figée (Desktop) ===== */
+.sidebar {
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #003366; 
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
-.hero .highlight {
-  color: var(--accent-color);
+.sidebar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+    display: block;
+    margin: 0 auto 20px;
 }
 
-.hero p {
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  max-width: 750px;
-  margin-bottom: 2rem;
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white; 
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
+/* ===== Barre de contact (Icônes rondes) ===== */
+.contact-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid transparent;
+.contact-bar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #a0c3e6;
+    transition: color 0.3s;
 }
 
-.btn-primary {
-  background-color: var(--accent-color);
-  color: #ffffff;
+.contact-bar i {
+    color: #003366;          /* Icône bleue */
+    background-color: white; /* Fond blanc */
+    border-radius: 50%;
+    width: 36px;             
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    flex-shrink: 0;          /* Empêche la déformation */
+    transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-  background-color: var(--accent-hover);
+.contact-bar span {
+    margin-left: 10px;
+    font-size: 0.9em;
+    white-space: nowrap;
 }
 
-.btn-secondary {
-  border-color: var(--border-color);
-  color: var(--text-primary);
-  background-color: var(--bg-secondary);
+.contact-bar a:hover {
+    color: white;
 }
 
-.btn-secondary:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+.contact-bar a:hover i {
+    background-color: #a0c3e6;
 }
 
-/* Section Styling */
-section {
-  padding: 3rem 0;
-  border-top: 1px solid var(--border-color);
+/* ===== Sections dans la Sidebar (Cartes Bleues) ===== */
+.sidebar .about,
+.sidebar .skills-tech-container,
+.sidebar .skills-tools-container,
+.skills-card {
+    background-color: #0066cc; /* Bleu clair harmonisé */
+    color: white; 
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin-top: 10px; 
+    margin-bottom: 25px; 
 }
 
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+.sidebar h4 {
+    color: white; 
+    margin-top: 25px; 
+    font-size: 1.1em; 
 }
 
-section h2 i {
-  color: var(--accent-color);
+/* ===== Outils (Badges/Tags) ===== */
+.skills-tools {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-top: 10px;
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    background: white; 
+    color: #003366; 
+    padding: 5px 15px 5px 5px; /* Padding asymétrique pour le cercle */
+    border-radius: 50px;
+    font-size: 0.85em; 
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
-.skill-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm);
+.skill-tag i {
+    color: white;
+    background-color: #003366;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
-.skill-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: var(--accent-color);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.skill-tag:hover {
+    background: #e6f0ff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* TRANSFORM SCALE SUPPRIMÉ POUR ÉVITER LES BUGS DE SUPERPOSITION */
 }
 
-.skill-list {
-  list-style: none;
+/* ===== Compétences Techniques (Liste épurée) ===== */
+.skills-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.skill-list li {
-  margin-bottom: 0.75rem;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
+.skills-card li {
+    color: white;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.skill-list strong {
-  color: var(--text-primary);
+.skills-card li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.6);
 }
 
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+/* ===== Colonne principale (Contenu) ===== */
+.main {
+    margin-left: 30%;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
-.project-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.header-main {
+    position: sticky; 
+    top: 0;          
+    z-index: 10;      
+    background-color: #f9fbff; 
+    padding: 15px 0 20px 0;    
+    border-bottom: 1px solid #e0e0e0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.project-card:hover {
-  box-shadow: var(--shadow-md);
+/* ===== Items Projets & Expériences ===== */
+.project-item, .experience-item { 
+    background: white;
+    border-left: 5px solid #0066cc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
 }
 
-.project-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+.project-item:hover, .experience-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.project-card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+.project-item .project-image {
+    width: 250px;
+    height: auto;
+    float: right; 
+    margin: 0 0 10px 15px; 
+    border-radius: 5px;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: auto;
+.project-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+
+/* Conteneur aligné avec le logo miniature */
+.item-header-with-logo {
+    display: flex;
+    align-items: center; /* Aligne le logo verticalement au milieu du titre */
+    gap: 15px;           /* Espace entre le logo et le texte */
+    margin-bottom: 12px;
 }
 
-.tag {
-  background-color: var(--code-bg);
-  color: var(--accent-color);
-  font-family: 'Fira Code', monospace;
-  font-size: 0.8rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
+/* Le Logo miniature décalé */
+.company-logo {
+    width: 45px;             /* Taille miniature */
+    height: 45px;
+    flex-shrink: 0;          /* Empêche le logo de rétrécir */
+    object-fit: contain;     /* Garde les proportions du logo */
+    background-color: white; 
+    padding: 4px;
+    border-radius: 6px;      /* Coins arrondis style icône appli */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Learning Badge */
-.learning-card {
-  background-color: var(--bg-card);
-  border: 1px dashed var(--accent-color);
-  padding: 1.25rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+/* Ajustement des titres à côté du logo */
+.item-header-with-logo h3 {
+    margin: 0;               /* Supprime les marges par défaut */
+    font-size: 1.2em;
+    color: #003366;
 }
 
-.learning-card i {
-  font-size: 1.5rem;
-  color: var(--accent-color);
+.company-name {
+    margin: 2px 0 0 0;
+    font-size: 0.95em;
+    color: #0066cc;
+    font-weight: bold;
 }
 
-.learning-card p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.experience-dates {
+    display: block;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 2px;
 }
 
-.contact-subtext {
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+/* Version Mobile : on garde l'alignement horizontal mais on réduit un peu */
+@media (max-width: 600px) {
+    .company-logo {
+        width: 35px;
+        height: 35px;
+    }
+    .item-header-with-logo h3 {
+        font-size: 1.1em;
+    }
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding-top: 3rem;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .nav-links {
-    gap: 1rem;
-  }
-  .cta-buttons {
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+/* --- Style des Certificats en bandes horizontales --- */
+.certif-item {
+    display: flex;
     flex-direction: column;
-  }
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    
+    /* La petite bande horizontale/verticale à gauche */
+    border-left: 5px solid #0066cc; 
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.certif-item:hover {
+    transform: translateX(5px); /* Petit décalage vers la droite au survol */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Alignement du contenu interne */
+.certif-info {
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte sur la même ligne */
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.certif-icon {
+    font-size: 1.5em;
+    color: #0066cc;
+    width: 30px;
+    text-align: center;
+}
+
+.certif-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.certif-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #003366;
+}
+
+.certif-date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Conteneur des boutons en bas de la bande */
+.certif-actions {
+    display: flex;
+    gap: 10px;
+    padding-left: 45px; /* Aligne les boutons sous le texte (après l'icône) */
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+
+/* --- Boutons des Certifications --- */
+
+/* On cible spécifiquement les liens dans la section certification pour forcer le cadre */
+.section.certif a.certif-link, 
+.section.certif a.verification-sticker {
+    display: inline-flex !important; /* Force l'affichage en bloc pour voir le cadre */
+    font-size: 0.85em !important;
+    padding: 6px 14px !important;
+    margin: 5px 5px 5px 0 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600 !important;
+    transition: all 0.3s ease;
+    
+    /* LE CADRE : On le met plus foncé pour être sûr qu'il se voit */
+    border: 1.5px solid #0066cc !important; 
+    background-color: #ffffff !important;
+}
+
+/* Style spécifique pour le bouton Bleu */
+.section.certif a.certif-link {
+    color: #0066cc !important;
+    border-color: #0066cc !important;
+}
+
+/* Style spécifique pour le bouton Vert (Authenticité) */
+.section.certif a.verification-sticker {
+    color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+/* Effets au survol */
+.section.certif a.certif-link:hover {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
+}
+
+.section.certif a.verification-sticker:hover {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+
+/* Responsive : sur mobile, on empile le logo et le texte */
+@media (max-width: 600px) {
+    .item-header-with-logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 900px) {
+    .sidebar, .main {
+        width: 100%;
+        position: static;
+        margin-left: 0;
+    }
+    .sidebar {
+        height: auto;
+    }
+    .project-item .project-image {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+    }
 }
