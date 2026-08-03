@@ -3,405 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Water Resources Engineering Portfolio</title>
+  <title>Interactive Portfolio — Glassmorphism Animation</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div class="app-layout">
+  <!-- Ambient Animated Background Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="container">
     
-    <!-- LEFT SIDEBAR -->
-    <aside class="sidebar">
-      <div>
-        <div class="profile-brand">
-          <h1>Water Resources Engineering</h1>
-          <p>Academic & Professional Portfolio</p>
-        </div>
+    <!-- Hero Header with Entrance Animation -->
+    <header class="hero-header">
+      <span class="hero-tag">Water Resources & Environment</span>
+      <h1 class="hero-title">Professional Experience</h1>
+      <p class="hero-subtitle">Interactive overview of technical coordination, engineering internships, and environmental initiatives.</p>
+    </header>
 
-        <nav class="nav-menu">
-          <a href="#education" class="nav-item">🎓 Education</a>
-          <a href="#projects" class="nav-item">🌊 Projects</a>
-          <a href="#experience" class="nav-item">💼 Experience</a>
-          <a href="#seminars" class="nav-item">🎤 Seminars</a>
-        </nav>
-      </div>
+    <!-- Interactive Glassmorphism Dashboard Cards -->
+    <main class="cards-stack">
 
-      <div class="sidebar-footer">
-        © 2026 Engineering Portfolio
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT AREA -->
-    <main class="main-content">
-
-      <!-- SECTION 1: EDUCATION -->
-      <section id="education" class="section-block">
-        <div class="section-header">
-          <h2 class="section-title">Education</h2>
-          <button class="btn-add" id="openEduModalBtn">+ Add Education</button>
-        </div>
-
-        <div class="card-grid" id="eduList">
-          
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">M.Sc. in Integrated Water Management</div>
-                <div class="card-subtitle">Ankara University • Türkiye</div>
-              </div>
-              <span class="pill-date">2024 – 2026</span>
-            </div>
+      <!-- CARD 1 (PRESENT / ACTIVE ROLE) -->
+      <article class="glass-card">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="role-title">Project Coordinator</h2>
+            <div class="company-name">Mains Unies d’Afrique • Ivory Coast (Remote)</div>
           </div>
-
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">M.Sc. in Water Science and Technology</div>
-                <div class="card-subtitle">Nangui Abrogoua University • Ivory Coast</div>
-              </div>
-              <span class="pill-date">2022 – 2023</span>
-            </div>
-          </div>
-
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">B.Sc. in Water Science and Technology</div>
-                <div class="card-subtitle">Nangui Abrogoua University • Ivory Coast</div>
-              </div>
-              <span class="pill-date">2019 – 2022</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SECTION 2: PROJECTS -->
-      <section id="projects" class="section-block">
-        <div class="section-header">
-          <h2 class="section-title">Projects</h2>
-          <button class="btn-add" id="openProjectModalBtn">+ Add Project</button>
-        </div>
-
-        <div class="card-grid" id="projectList">
-
-          <!-- PROJECT 1 -->
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">Hydrologic Modeling, Calibration, & Validation of Kossou Watershed</div>
-                <div class="card-subtitle">Kossou Watershed, Côte d'Ivoire</div>
-              </div>
-              <span class="pill-date">Hydrologic Analysis</span>
-            </div>
-            <div class="card-body">
-              <p>Performed hydrologic modeling, calibration, and validation of the Kossou Watershed using HEC-HMS to evaluate watershed response under varying rainfall conditions.</p>
-              <p>Simulated future runoff scenarios using hypothetical rainfall events to assess changes in streamflow, peak discharge, and watershed hydrologic behavior, supporting flood risk assessment and water resources planning.</p>
-              
-              <div class="media-container">
-                <div class="media-icon">🌧️</div>
-                <div class="media-text">Kossou Watershed HEC-HMS Simulation Model Diagram</div>
-              </div>
-
-              <div class="tags-row">
-                <span class="tag-chip">HEC-HMS</span>
-                <span class="tag-chip">Kossou Watershed</span>
-                <span class="tag-chip">Hydrologic Modeling</span>
-                <span class="tag-chip">Calibration & Validation</span>
-                <span class="tag-chip">Streamflow Simulation</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT 2 -->
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">Intensity–Duration–Frequency (IDF) Curve Development</div>
-                <div class="card-subtitle">Statistical Analysis & Stormwater Design</div>
-              </div>
-              <span class="pill-date">Hydrological Modeling</span>
-            </div>
-            <div class="card-body">
-              <p>Developed Intensity–Duration–Frequency (IDF) curves using the Gumbel probability distribution to estimate 50-year return period rainfall intensities for hydraulic and stormwater drainage design.</p>
-              
-              <div class="media-container">
-                <div class="media-icon">📊</div>
-                <div class="media-text">50-Year Return Period IDF Curve Chart</div>
-              </div>
-
-              <div class="tags-row">
-                <span class="tag-chip">IDF Curves</span>
-                <span class="tag-chip">Gumbel Distribution</span>
-                <span class="tag-chip">50-Year Return Period</span>
-                <span class="tag-chip">Stormwater Design</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT 3 -->
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">Master’s Thesis: Open Earth Channel Drainage Design & Climate Analysis</div>
-                <div class="card-subtitle">Çatalkaya Watershed • 7 Provinces Across Türkiye</div>
-              </div>
-              <span class="pill-date">Thesis Research</span>
-            </div>
-            <div class="card-body">
-              <p>Designed trapezoidal open earth drainage channels for seven provinces representing different climatic regions of Türkiye to assess regional climate variability on channel dimensions and flow capacity.</p>
-              <p>Utilized Turkish State Meteorological Service rainfall IDF data, McMath runoff estimation, and Manning hydraulic equations. Proposed retention ponds and vegetated swales as nature-based solutions.</p>
-
-              <div class="tags-row">
-                <span class="tag-chip">Hydraulic Modeling</span>
-                <span class="tag-chip">McMath Method</span>
-                <span class="tag-chip">Manning Equation</span>
-                <span class="tag-chip">Nature-Based Solutions</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SECTION 3: EXPERIENCE -->
-      <section id="experience" class="section-block">
-        <div class="section-header">
-          <h2 class="section-title">Experience</h2>
-          <button class="btn-add" id="openExpModalBtn">+ Add Experience</button>
-        </div>
-
-        <div class="card-grid" id="expList">
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">Internship: Sewer Drainage System Implementation</div>
-                <div class="card-subtitle">Field Working Student</div>
-              </div>
-              <span class="pill-date">Nov 2025 – Dec 2025</span>
-            </div>
-            <div class="card-body">
-              <p>Worked as a field working student during the implementation of an urban sewer drainage system. Observed pipeline installation processes and supported surveying, elevation control, and site engineering coordination.</p>
-
-              <div class="tags-row">
-                <span class="tag-chip">Pipeline Installation</span>
-                <span class="tag-chip">Land Surveying</span>
-                <span class="tag-chip">Elevation Control</span>
-              </div>
-            </div>
+          <div class="date-pill">
+            <span class="live-dot"></span>
+            May 10, 2026 – Present
           </div>
         </div>
-      </section>
-
-      <!-- SECTION 4: SEMINARS -->
-      <section id="seminars" class="section-block">
-        <div class="section-header">
-          <h2 class="section-title">Seminars & Presentations</h2>
-          <button class="btn-add" id="openSeminarModalBtn">+ Add Seminar</button>
+        <p class="card-description">
+          Coordinated community development projects focused on water, sanitation, and environmental sustainability. Supported comprehensive project planning, stakeholder engagement, and operational implementation.
+        </p>
+        <div class="tags-wrapper">
+          <span class="skill-tag">Community Development</span>
+          <span class="skill-tag">WASH Sustainability</span>
+          <span class="skill-tag">Project Planning</span>
+          <span class="skill-tag">Remote Coordination</span>
         </div>
+      </article>
 
-        <div class="card-grid" id="seminarList">
-          <div class="dashboard-card">
-            <div class="card-top">
-              <div>
-                <div class="card-title">Hydraulic Modeling & Flood Risk Assessment Using HEC-RAS</div>
-                <div class="card-subtitle">Ankara University</div>
-              </div>
-              <span class="pill-date">May 23, 2025</span>
-            </div>
-            <div class="card-body">
-              <ul>
-                <li>Delivered a technical presentation on hydraulic modeling and flood risk assessment using HEC-RAS.</li>
-                <li>Developed a hydraulic model of the Sakarya River and simulated flood scenarios to evaluate water surface profiles.</li>
-                <li>Conducted statistical flood frequency analysis using Hyfran to estimate design flood discharges.</li>
-                <li>Proposed a pumping system as a flood mitigation measure to improve drainage capacity.</li>
-              </ul>
-
-              <div class="tags-row">
-                <span class="tag-chip">HEC-RAS</span>
-                <span class="tag-chip">Sakarya River</span>
-                <span class="tag-chip">Hyfran Analysis</span>
-                <span class="tag-chip">Flood Mitigation</span>
-              </div>
-            </div>
+      <!-- CARD 2 -->
+      <article class="glass-card">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="role-title">Sewer Drainage System Implementation Intern</h2>
+            <div class="company-name">Field Working Student</div>
           </div>
+          <div class="date-pill">Nov 2025 – Dec 2025</div>
         </div>
-      </section>
+        <p class="card-description">
+          Observed and assisted in urban sewer pipeline installation processes. Supported site engineering teams with topological surveying, channel elevation controls, and real-time field coordination.
+        </p>
+        <div class="tags-wrapper">
+          <span class="skill-tag">Pipeline Installation</span>
+          <span class="skill-tag">Elevation Control</span>
+          <span class="skill-tag">Land Surveying</span>
+          <span class="skill-tag">Site Coordination</span>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="glass-card">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="role-title">Intern – Plastic Waste Recycling & Reprocessing</h2>
+            <div class="company-name">Güler Plastik • Istanbul, Turkey</div>
+          </div>
+          <div class="date-pill">July 15 – Aug 26, 2024</div>
+        </div>
+        <p class="card-description">
+          Collaborated with engineering teams to optimize plastic waste recycling processes, enhancing material reprocessing efficiency and analyzing industrial waste management workflows.
+        </p>
+        <div class="tags-wrapper">
+          <span class="skill-tag">Process Optimization</span>
+          <span class="skill-tag">Plastic Reprocessing</span>
+          <span class="skill-tag">Waste Management</span>
+          <span class="skill-tag">Workflow Analysis</span>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="glass-card">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="role-title">Sanitation & Hygiene Agent</h2>
+            <div class="company-name">Adam Afrique • Sikensi, Ivory Coast</div>
+          </div>
+          <div class="date-pill">Aug 2 – Nov 10, 2018</div>
+        </div>
+        <p class="card-description">
+          Implemented rigorous sanitation protocols and public hygiene initiatives, ensuring complete compliance with health standards across diverse community settings.
+        </p>
+        <div class="tags-wrapper">
+          <span class="skill-tag">Sanitation Protocols</span>
+          <span class="skill-tag">Hygiene Programs</span>
+          <span class="skill-tag">Health Compliance</span>
+          <span class="skill-tag">Public Health</span>
+        </div>
+      </article>
 
     </main>
+
   </div>
 
-  <!-- MODALS -->
-  <div class="modal-overlay" id="eduModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Add Education</h3>
-        <button class="close-btn" id="closeEduBtn">&times;</button>
-      </div>
-      <form id="eduForm">
-        <div class="form-group"><label>Degree</label><input type="text" id="eduDegree" required /></div>
-        <div class="form-group"><label>Institution & Country</label><input type="text" id="eduInst" required /></div>
-        <div class="form-group"><label>Period</label><input type="text" id="eduPeriod" placeholder="2024–2026" required /></div>
-        <div class="form-actions">
-          <button type="button" class="btn-cancel" id="cancelEduBtn">Cancel</button>
-          <button type="submit" class="btn-add">Save</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="projectModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Add Project</h3>
-        <button class="close-btn" id="closeProjectBtn">&times;</button>
-      </div>
-      <form id="projectForm">
-        <div class="form-group"><label>Title</label><input type="text" id="projTitle" required /></div>
-        <div class="form-group"><label>Location / Category</label><input type="text" id="projLocation" required /></div>
-        <div class="form-group"><label>Description</label><textarea id="projDesc" required></textarea></div>
-        <div class="form-group"><label>Tags (comma separated)</label><input type="text" id="projTags" /></div>
-        <div class="form-actions">
-          <button type="button" class="btn-cancel" id="cancelProjectBtn">Cancel</button>
-          <button type="submit" class="btn-add">Save</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="expModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Add Experience</h3>
-        <button class="close-btn" id="closeExpBtn">&times;</button>
-      </div>
-      <form id="expForm">
-        <div class="form-group"><label>Role</label><input type="text" id="expRole" required /></div>
-        <div class="form-group"><label>Organization / Type</label><input type="text" id="expType" required /></div>
-        <div class="form-group"><label>Period</label><input type="text" id="expDates" required /></div>
-        <div class="form-group"><label>Description</label><textarea id="expDesc" required></textarea></div>
-        <div class="form-actions">
-          <button type="button" class="btn-cancel" id="cancelExpBtn">Cancel</button>
-          <button type="submit" class="btn-add">Save</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="seminarModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Add Seminar</h3>
-        <button class="close-btn" id="closeSeminarBtn">&times;</button>
-      </div>
-      <form id="seminarForm">
-        <div class="form-group"><label>Title</label><input type="text" id="semTitle" required /></div>
-        <div class="form-group"><label>Venue</label><input type="text" id="semVenue" required /></div>
-        <div class="form-group"><label>Date</label><input type="text" id="semDate" required /></div>
-        <div class="form-group"><label>Key Points (1 per line)</label><textarea id="semPoints" required></textarea></div>
-        <div class="form-actions">
-          <button type="button" class="btn-cancel" id="cancelSeminarBtn">Cancel</button>
-          <button type="submit" class="btn-add">Save</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    const setupModal = (overlayId, openBtnId, closeBtnId, cancelBtnId, formId, renderFn) => {
-      const overlay = document.getElementById(overlayId);
-      const openBtn = document.getElementById(openBtnId);
-      const closeBtn = document.getElementById(closeBtnId);
-      const cancelBtn = document.getElementById(cancelBtnId);
-      const form = document.getElementById(formId);
-
-      const open = () => overlay.classList.add('active');
-      const close = () => { overlay.classList.remove('active'); form.reset(); };
-
-      if(openBtn) openBtn.addEventListener('click', open);
-      if(closeBtn) closeBtn.addEventListener('click', close);
-      if(cancelBtn) cancelBtn.addEventListener('click', close);
-
-      overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        renderFn();
-        close();
-      });
-    };
-
-    setupModal('eduModal', 'openEduModalBtn', 'closeEduBtn', 'cancelEduBtn', 'eduForm', () => {
-      const degree = document.getElementById('eduDegree').value;
-      const inst = document.getElementById('eduInst').value;
-      const period = document.getElementById('eduPeriod').value;
-
-      const card = document.createElement('div');
-      card.className = 'dashboard-card';
-      card.innerHTML = `
-        <div class="card-top">
-          <div><div class="card-title">${degree}</div><div class="card-subtitle">${inst}</div></div>
-          <span class="pill-date">${period}</span>
-        </div>`;
-      document.getElementById('eduList').prepend(card);
-    });
-
-    setupModal('projectModal', 'openProjectModalBtn', 'closeProjectBtn', 'cancelProjectBtn', 'projectForm', () => {
-      const title = document.getElementById('projTitle').value;
-      const loc = document.getElementById('projLocation').value;
-      const desc = document.getElementById('projDesc').value;
-      const tags = document.getElementById('projTags').value.split(',').filter(t => t.trim());
-
-      const card = document.createElement('div');
-      card.className = 'dashboard-card';
-      const tagsHTML = tags.map(t => `<span class="tag-chip">${t.trim()}</span>`).join('');
-
-      card.innerHTML = `
-        <div class="card-top">
-          <div><div class="card-title">${title}</div><div class="card-subtitle">${loc}</div></div>
-        </div>
-        <div class="card-body">
-          <p>${desc}</p>
-          ${tagsHTML ? `<div class="tags-row">${tagsHTML}</div>` : ''}
-        </div>`;
-      document.getElementById('projectList').prepend(card);
-    });
-
-    setupModal('expModal', 'openExpModalBtn', 'closeExpBtn', 'cancelExpBtn', 'expForm', () => {
-      const role = document.getElementById('expRole').value;
-      const type = document.getElementById('expType').value;
-      const dates = document.getElementById('expDates').value;
-      const desc = document.getElementById('expDesc').value;
-
-      const card = document.createElement('div');
-      card.className = 'dashboard-card';
-      card.innerHTML = `
-        <div class="card-top">
-          <div><div class="card-title">${role}</div><div class="card-subtitle">${type}</div></div>
-          <span class="pill-date">${dates}</span>
-        </div>
-        <div class="card-body"><p>${desc}</p></div>`;
-      document.getElementById('expList').prepend(card);
-    });
-
-    setupModal('seminarModal', 'openSeminarModalBtn', 'closeSeminarBtn', 'cancelSeminarBtn', 'seminarForm', () => {
-      const title = document.getElementById('semTitle').value;
-      const venue = document.getElementById('semVenue').value;
-      const date = document.getElementById('semDate').value;
-      const points = document.getElementById('semPoints').value.split('\n').filter(p => p.trim());
-
-      const card = document.createElement('div');
-      card.className = 'dashboard-card';
-      const listHTML = points.map(p => `<li>${p}</li>`).join('');
-
-      card.innerHTML = `
-        <div class="card-top">
-          <div><div class="card-title">${title}</div><div class="card-subtitle">${venue}</div></div>
-          <span class="pill-date">${date}</span>
-        </div>
-        <div class="card-body"><ul>${listHTML}</ul></div>`;
-      document.getElementById('seminarList').prepend(card);
-    });
-  </script>
 </body>
 </html>
