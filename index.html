@@ -1,150 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Portfolio of Kouamé Franck André N'Zi — Water Resources & Hydraulic Drainage Systems Engineer. Specializing in HEC-RAS, HEC-HMS, EPA SWMM, and GIS applications.">
-  <title>Kouamé Franck André N'Zi | Water Resources & Hydraulic Engineer</title>
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#" class="logo">
-          <span class="logo-name">K. Franck André N'Zi</span>
-          <span class="logo-title" data-i18n="navTitle">Water Resources Engineer</span>
-        </a>
-        
-        <ul class="nav-links">
-          <li><a href="#about" data-i18n="navAbout">Overview</a></li>
-          <li><a href="#expertise" data-i18n="navSkills">Core Expertise</a></li>
-          <li><a href="#projects" data-i18n="navProjects">Technical Projects</a></li>
-          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
-          
-          <!-- Language Selector -->
-          <li class="lang-select-wrapper">
-            <i class="fa-solid fa-globe"></i>
-            <select id="lang-select" aria-label="Select Language">
-              <option value="en" selected>EN</option>
-              <option value="fr">FR</option>
-              <option value="tr">TR</option>
-            </select>
-          </li>
-
-          <!-- Theme Toggle -->
-          <li>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-              <i class="fa-solid fa-moon"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    
-    <!-- Hero / Profile Section -->
-    <section class="hero" id="about">
-      <div class="hero-badge" data-i18n="heroBadge">Integrated Water Management Specialist</div>
-      <h1 data-i18n="heroTitle">Kouamé Franck André N'Zi</h1>
-      <h2 data-i18n="heroSubtitle">Hydraulic Drainage Systems & Hydrologic Modeling Engineer</h2>
-      <p data-i18n="heroText">
-        Master’s graduate in <strong>Integrated Water Management</strong> specializing in <strong>Hydraulic Drainage Systems</strong>. Proven expertise in 1D/2D hydrodynamic simulations, urban stormwater management, watershed behavior modeling, and geospatial environmental analysis. Dedicated to engineering climate-resilient water infrastructures and mitigating flood hazards.
-      </p>
-      
-      <div class="cta-buttons">
-        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="btnEmail">Initiate Contact</span></a>
-        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
-      </div>
-    </section>
-
-    <!-- Core Technical Expertise -->
-    <section id="expertise">
-      <div class="section-header">
-        <h2 data-i18n="skillsTitle"><i class="fa-solid fa-layer-group"></i> Technical Competencies</h2>
-        <p class="section-subtitle" data-i18n="skillsSub">Engineering tools, numerical modeling frameworks, and computational software.</p>
-      </div>
-
-      <div class="skills-grid">
-        
-        <div class="skill-card">
-          <div class="card-icon"><i class="fa-solid fa-water"></i></div>
-          <h3 data-i18n="skillCat1">Hydrologic & Hydraulic Modeling</h3>
-          <ul class="skill-list">
-            <li>
-              <strong>HEC-RAS (1D/2D)</strong>
-              <span data-i18n="sk1">Unsteady flow simulation, 2D floodplain inundation mapping, and dam/levee break analysis.</span>
-            </li>
-            <li>
-              <strong>HEC-HMS</strong>
-              <span data-i18n="sk2">Comprehensive watershed runoff generation, hydrograph development, and continuous flow simulation.</span>
-            </li>
-            <li>
-              <strong>EPA SWMM</strong>
-              <span data-i18n="sk3">Dynamic urban stormwater network modeling, sewer hydraulic evaluation, and LID performance assessment.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
-          <h3 data-i18n="skillCat2">Geospatial Analytics & Remote Sensing</h3>
-          <ul class="skill-list">
-            <li>
-              <strong>QGIS & Spatial Analysis</strong>
-              <span data-i18n="sk4">Terrain processing (DEM/DTM), automated basin delineation, and hydro-spatial parameter extraction.</span>
-            </li>
-            <li>
-              <strong>Google Earth Engine</strong>
-              <span data-i18n="sk5">Cloud-based satellite imagery analytics, land-use classification, and environmental temporal monitoring.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-          <h3 data-i18n="skillCat3">Technical Computing & Documentation</h3>
-          <ul class="skill-list">
-            <li>
-              <strong>Microsoft Excel (Advanced)</strong>
-              <span data-i18n="sk6">Hydraulic data manipulation, statistical hydrology, and automated engineering spreadsheets.</span>
-            </li>
-            <li>
-              <strong>Engineering Documentation</strong>
-              <span data-i18n="sk7">Technical report writing, executive presentations, and interdisciplinary project communication.</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Engineering Projects -->
+<!-- Engineering Projects & Field Experience -->
     <section id="projects">
       <div class="section-header">
-        <h2 data-i18n="projectsTitle"><i class="fa-solid fa-diagram-project"></i> Applied Engineering Projects</h2>
-        <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, and spatial studies.</p>
+        <h2 data-i18n="projectsTitle"><i class="fa-solid fa-diagram-project"></i> Applied Engineering Projects & Field Experience</h2>
+        <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, field internships, and spatial studies.</p>
       </div>
 
       <div class="projects-grid">
 
+        <!-- Master's Thesis Project Card (Featured / Full Width) -->
+        <div class="project-card featured-project">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 FOR MASTER'S THESIS -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/OPEN%20CHANNEL.png" alt="Thesis Channel Hydraulic Sizing" class="project-img">
+              <div class="image-overlay-badge"><i class="fa-solid fa-graduation-cap"></i> Master's Thesis (Image 1)</div>
+            </div>
+            <!-- IMAGE SLOT 2 FOR MASTER'S THESIS -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/%C4%B0DF%20CURVES.png" alt="İDF CURVES" class="project-img">
+              <div class="image-overlay-badge"><i class="fa-solid fa-leaf"></i> Master's Thesis (Image 2)</div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3>Regional Climate Variability & Hydraulic Drainage Design (Türkiye)</h3>
+            <p>Designed trapezoidal open earth drainage channels across seven provinces representing distinct climatic regions of Türkiye: <strong>Bursa, Aydın, Mersin, Kırşehir, Ordu, Muş, and Şanlıurfa</strong>. Evaluated hydraulic performance and channel dimensions to assess how regional climate variability influences parameters such as channel width, depth, longitudinal slope, and flow capacity.</p>
+            
+            <ul class="project-details-list">
+              <li><strong>Hydrologic Modeling:</strong> Obtained intensity–duration rainfall data from the Turkish State Meteorological Service to construct IDF curves for each province. Applied the <strong>McMath empirical method</strong> (used in Türkiye for watersheds > 25 km²) to calculate runoff for the Çatalkaya Watershed.</li>
+              <li><strong>Hydraulic Sizing:</strong> Utilized the <strong>Manning equation</strong> to size trapezoidal open earth channels designed to safely convey peak flood discharge.</li>
+              <li><strong>Nature-Based Solutions (NBS):</strong> Integrated retention ponds and vegetated swale channels to improve flood resilience, increase temporary storage, promote infiltration, and reduce peak runoff entering the system.</li>
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Manning Equation</span>
+              <span class="tag">McMath Method</span>
+              <span class="tag">IDF Curves</span>
+              <span class="tag">Open Channel Hydraulics</span>
+              <span class="tag">Nature-Based Solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. Sewer Drainage System Field Internship Card -->
         <div class="project-card">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/F%C4%B0ELD%20WORK.png" alt="Sewer Pipeline Installation Field Work" class="project-img">
+            </div>
+            <!-- IMAGE SLOT 2 -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/F%C4%B0ELD%20WORK%202.png" alt="On-Site Elevation Control and Surveying" class="project-img">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Sewer Drainage System Field Internship</h3>
+            <p class="project-date"><i class="fa-solid fa-calendar-days"></i> November 2025 – December 2025</p>
+            <p>Worked as a field engineer student during the implementation of a municipal sewer drainage system. Observed pipeline installation processes, assisted with topographical surveying, conducted elevation control, and facilitated on-site technical coordination with lead engineers.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Field Engineering</span>
+            <span class="tag">Sewer Infrastructure</span>
+            <span class="tag">Surveying & Elevation Control</span>
+            <span class="tag">Pipeline Construction</span>
+          </div>
+        </div>
+
+        <!-- 2. Sakarya River Flood Modeling & Presentation Card -->
+        <div class="project-card">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/SEM%C4%B0NAR.png" alt="Sakarya River HEC-RAS Model" class="project-img">
+            </div>
+            <!-- IMAGE SLOT 2 -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/HEC%20RAS%20S%C4%B0MULAT%C4%B0ON.png" alt="Water Surface Profiles and Flood Inundation" class="project-img">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Sakarya River Flood Modeling & Hazard Evaluation</h3>
+            <p class="project-date"><i class="fa-solid fa-university"></i> May 23, 2025 — Ankara University</p>
+            <p>Delivered a comprehensive technical presentation on hydraulic modeling and flood risk assessment using HEC-RAS. Developed a 1D/2D hydraulic model of the Sakarya River, simulated multiple flood scenarios, and evaluated water surface profiles.</p>
+            <ul class="project-details-list">
+              <li>Executed statistical flood frequency analysis using <strong>Hyfran</strong> to calculate design discharges across various return periods.</li>
+              <li>Proposed a dedicated pumping system as a flood mitigation strategy to expand drainage capacity in vulnerable low-lying zones.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">HEC-RAS</span>
+            <span class="tag">Hyfran</span>
+            <span class="tag">Flood Frequency Analysis</span>
+            <span class="tag">Mitigation Pumping Systems</span>
+          </div>
+        </div>
+
+        <!-- 3. Kossou Watershed Hydrologic Modeling Card -->
+        <div class="project-card">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/Hec%20hms.jpg" alt="Kossou Watershed HEC-HMS Model Setup" class="project-img">
+            </div>
+         </div>
+          <div class="project-content">
+            <h3>Hydrologic Modeling, Calibration & Validation — Kossou Watershed</h3>
+            <p>Performed full-scale hydrologic modeling, calibration, and validation of the Kossou Watershed (Côte d'Ivoire) using <strong>HEC-HMS</strong>. Simulated future runoff dynamics under hypothetical intense rainfall events to assess changes in streamflow, peak discharge timing, and overall watershed response to guide regional water resource planning.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">HEC-HMS</span>
+            <span class="tag">Côte d'Ivoire</span>
+            <span class="tag">Model Calibration & Validation</span>
+            <span class="tag">Runoff Simulation</span>
+          </div>
+        </div>
+
+        <!-- 4. Intensity–Duration–Frequency (IDF) Curve Development Card -->
+        <div class="project-card">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/IDF.jpg" alt="IDF Curves Chart Gumbel Distribution" class="project-img">
+            </div>
+            <!-- IMAGE SLOT 2 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_2_URL_HERE" alt="Stormwater Hydraulic Design Intensity Calculations" class="project-img">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Intensity–Duration–Frequency (IDF) Curve Development</h3>
+            <p>Engineered regional Intensity–Duration–Frequency (IDF) relationship curves applying the <strong>Gumbel probability distribution</strong>. Calculated peak 50-year return period rainfall intensities required for precision sizing of hydraulic structures and urban stormwater drainage networks.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">IDF Curves</span>
+            <span class="tag">Gumbel Distribution</span>
+            <span class="tag">Statistical Hydrology</span>
+            <span class="tag">Stormwater Design</span>
+          </div>
+        </div>
+
+        <!-- 5. 2D Hydrodynamic Flood Assessment Card -->
+        <div class="project-card">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_1_URL_HERE" alt="HEC-RAS Flood Depth Map" class="project-img">
+            </div>
+            <!-- IMAGE SLOT 2 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_2_URL_HERE" alt="Velocity Vectors Mapping" class="project-img">
+            </div>
+          </div>
           <div class="project-content">
             <h3 data-i18n="p1Title">2D Hydrodynamic Flood Inundation Assessment</h3>
             <p data-i18n="p1Desc">Integrated 1D/2D HEC-RAS hydrodynamic simulation to map high-risk flood zones, quantify depth-velocity hazards, and inform urban flood risk management strategies.</p>
-         ![ this is image ](https://github.com/franckandre/franck.nzi.portfolio/blob/main/assets/SEM%C4%B0NAR.png)
           </div>
           <div class="tags">
             <span class="tag">HEC-RAS 1D/2D</span>
@@ -153,19 +163,18 @@
           </div>
         </div>
 
+        <!-- 6. Urban Stormwater Card -->
         <div class="project-card">
-          <div class="project-content">
-            <h3 data-i18n="p2Title">Watershed Rainfall-Runoff Transformation Modeling</h3>
-            <p data-i18n="p2Desc">Hydrological watershed modeling using HEC-HMS to evaluate hydrograph responses, peak discharge timing, and basin behavior under high-intensity rainfall scenarios.</p>
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_1_URL_HERE" alt="EPA SWMM Network Modeling" class="project-img">
+            </div>
+            <!-- IMAGE SLOT 2 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_2_URL_HERE" alt="Surcharging Conduit Assessment" class="project-img">
+            </div>
           </div>
-          <div class="tags">
-            <span class="tag">HEC-HMS</span>
-            <span class="tag" data-i18n="tagHydro">Catchment Hydrology</span>
-            <span class="tag">Runoff Analysis</span>
-          </div>
-        </div>
-
-        <div class="project-card">
           <div class="project-content">
             <h3 data-i18n="p3Title">Urban Stormwater Infrastructure & Hydraulic Performance</h3>
             <p data-i18n="p3Desc">EPA SWMM dynamic modeling of municipal drainage networks to evaluate conveyance capacity, pinpoint surcharging conduits, and propose drainage optimization measures.</p>
@@ -177,7 +186,18 @@
           </div>
         </div>
 
+        <!-- 7. Geospatial Analytics Card -->
         <div class="project-card">
+          <div class="project-images-grid">
+            <!-- IMAGE SLOT 1 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_1_URL_HERE" alt="QGIS Surface Water Mapping" class="project-img">
+            </div>
+            <!-- IMAGE SLOT 2 -->
+            <div class="project-image-wrapper">
+              <img src="YOUR_IMAGE_2_URL_HERE" alt="Google Earth Engine Land Cover Analysis" class="project-img">
+            </div>
+          </div>
           <div class="project-content">
             <h3 data-i18n="p4Title">Geospatial Water Resource Monitoring & Analytics</h3>
             <p data-i18n="p4Desc">Multi-temporal satellite data analysis using QGIS and Google Earth Engine to monitor hydrological features, land-cover dynamics, and surface water availability.</p>
@@ -191,46 +211,3 @@
 
       </div>
     </section>
-
-    <!-- Professional Advancement -->
-    <section>
-      <div class="section-header">
-        <h2 data-i18n="devTitle"><i class="fa-solid fa-chart-line"></i> Professional Advancement & Training</h2>
-      </div>
-      
-      <div class="learning-card">
-        <div class="learning-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-        <div>
-          <strong data-i18n="devHeader">Autodesk Civil 3D — Infrastructure & Pipe Network Design</strong>
-          <p data-i18n="devDesc">Currently expanding operational mastery in 3D terrain modeling, automated pipe network layout, grading optimization, and BIM-integrated civil infrastructure drafting.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & Engagement -->
-    <section id="contact">
-      <div class="contact-box">
-        <h2 data-i18n="contactTitle">Professional Engagement</h2>
-        <p data-i18n="contactDesc">
-          I am actively seeking engineering opportunities, research collaborations, or consulting roles focused on hydraulic modeling, urban drainage design, and water resources management.
-        </p>
-        <div class="cta-buttons center-buttons">
-          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> <span data-i18n="btnEmailMe">Direct Inquiry</span></a>
-          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; Kouamé Franck André N'Zi. <span data-i18n="footerText">All rights reserved. Water Resources Engineering Portfolio.</span></p>
-    </div>
-  </footer>
-
-  <!-- Link External JavaScript -->
-  <script src="script.js"></script>
-</body>
-</html>
