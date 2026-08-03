@@ -4,160 +4,297 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Management & Civil Engineer Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
+    <!-- Animated Dynamic Background Bubbles -->
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="main-wrapper">
         
-        <!-- Header -->
-        <header>
-            <h1>Engineering Portfolio</h1>
-            <div class="subtitle">Integrated Water Management & Hydraulic Drainage Specialist</div>
-            <p class="summary">
-                Recent graduate with a Master's degree in Integrated Water Management, specializing in Stormwater Management and Hydraulic Drainage[cite: 1]. Passionate about designing sustainable water infrastructure and applying hydrologic and hydraulic modeling to address real-world water challenges[cite: 1]. Proficient in industry-standard engineering software and fluent in French, English, and Turkish[cite: 1].
-            </p>
+        <!-- Header Window -->
+        <header class="glass-card header-card float-anim">
+            <div class="header-content">
+                <div class="avatar-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <div class="header-text">
+                    <h1>Water Management Portfolio</h1>
+                    <div class="subtitle"><i class="fa-solid fa-droplet"></i> Integrated Water Management & Hydraulic Specialist</div>
+                    <p class="summary">
+                        Recent graduate with a Master's degree in Integrated Water Management, specializing in Stormwater Management and Hydraulic Drainage[cite: 1]. Passionate about designing sustainable water infrastructure and applying hydrologic and hydraulic modeling to address real-world water challenges[cite: 1]. Proficient in industry-standard engineering software and fluent in French, English, and Turkish[cite: 1].
+                    </p>
+                </div>
+            </div>
         </header>
 
-        <!-- Education -->
-        <section>
-            <h2>Education</h2>
-            
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Master of Science (M.Sc.) in Integrated Water Management</span>
-                    <span class="item-meta">2024 – 2026</span>
-                </div>
-                <div class="item-meta">Ankara University, Türkiye[cite: 1]</div>
-            </div>
+        <main class="grid-container">
 
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Master of Environmental Science (M.Sc.) in Water Science and Technology</span>
-                    <span class="item-meta">2022 – 2023</span>
-                </div>
-                <div class="item-meta">Nangui Abrogoua University, Ivory Coast[cite: 1]</div>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Bachelor of Environmental Science (B.Sc.) in Water Science and Technology</span>
-                    <span class="item-meta">2019 – 2022</span>
-                </div>
-                <div class="item-meta">Nangui Abrogoua University, Ivory Coast[cite: 1]</div>
-            </div>
-        </section>
-
-        <!-- Engineering Projects -->
-        <section>
-            <h2>Engineering & Academic Projects</h2>
-
-            <!-- Master Thesis -->
-            <div class="item">
-                <div class="item-title">Master’s Thesis: Regional Climate Variability & Hydraulic Drainage Design</div>
-                <ul>
-                    <li><strong>Regional Comparative Study:</strong> Designed trapezoidal open earth drainage channels across seven provinces in Türkiye (Bursa, Aydın, Mersin, Kırşehir, Ordu, Muş, and Şanlıurfa) to assess the impact of regional climate variability on channel width, depth, longitudinal slope, and flow capacity[cite: 1].</li>
-                    <li><strong>Hydrologic & Hydraulic Sizing:</strong> Derived IDF curves from Turkish State Meteorological Service rainfall data[cite: 1]. Applied the McMath empirical method for the Çatalkaya Watershed (>25 km²) to estimate runoff, and sized channels using the Manning equation[cite: 1].</li>
-                </ul>
-
-                <div class="formula-box">
-                    <strong>Design Parameters:</strong><br>
-                    • Bottom Width (b) = 3 m | Depth (h) = 2.45 m | Freeboard (h.p) = 0.25 m[cite: 1]<br>
-                    • Top Width (T) = 2×2×h + b = 12.8 m | Total Depth (D) = 2.7 m[cite: 1]<br>
-                    • Berms / Embankment: Height = 1.5 m | Top Width = 2.5 m[cite: 1]
+            <!-- Education Window -->
+            <section class="glass-card window-card float-anim delay-1">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
                 </div>
 
-                <ul>
-                    <li><strong>Nature-Based Solutions (NBS):</strong> Proposed retention ponds and vegetated swale channels to enhance flood resilience, increase temporary storage, promote infiltration, and reduce peak flows[cite: 1].</li>
-                </ul>
-            </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="date-badge">2024 – 2026</span>
+                        <h3>Master of Science (M.Sc.) in Integrated Water Management</h3>
+                        <p class="location">Ankara University, Türkiye[cite: 1]</p>
+                    </div>
 
-            <!-- Sakarya River Project -->
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Sakarya River Hydraulic Modeling & Flood Risk Assessment</span>
-                    <span class="item-meta">May 2025</span>
+                    <div class="timeline-item">
+                        <span class="date-badge">2022 – 2023</span>
+                        <h3>Master of Environmental Science (M.Sc.) in Water Science and Technology</h3>
+                        <p class="location">Nangui Abrogoua University, Ivory Coast[cite: 1]</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date-badge">2019 – 2022</span>
+                        <h3>Bachelor of Environmental Science (B.Sc.) in Water Science and Technology</h3>
+                        <p class="location">Nangui Abrogoua University, Ivory Coast[cite: 1]</p>
+                    </div>
                 </div>
-                <ul>
-                    <li>Delivered a technical presentation at Ankara University demonstrating HEC-RAS hydraulic modeling and flood risk assessment[cite: 1].</li>
-                    <li>Simulated multiple flood scenarios using 1D/2D HEC-RAS to evaluate water surface profiles and map flood extent[cite: 1].</li>
-                    <li>Conducted statistical flood frequency analysis using Hyfran to project design flood discharges for multiple return periods[cite: 1].</li>
-                    <li>Proposed a high-capacity pumping system to enhance drainage performance and lower flood risks in critical areas[cite: 1].</li>
-                </ul>
-            </div>
+            </section>
 
-            <!-- IDF Curves -->
-            <div class="item">
-                <div class="item-title">Intensity-Duration-Frequency (IDF) Curve Development</div>
-                <ul>
-                    <li>Constructed IDF curves using the Gumbel extreme value distribution to calculate 50-year return period rainfall intensities for stormwater infrastructure design[cite: 1].</li>
-                </ul>
-            </div>
-
-            <!-- Kossou Watershed -->
-            <div class="item">
-                <div class="item-title">Hydrologic Modeling & Calibration: Kossou Watershed (Côte d'Ivoire)</div>
-                <ul>
-                    <li>Executed hydrologic modeling, calibration, and validation of the Kossou Watershed using HEC-HMS[cite: 1].</li>
-                    <li>Simulated future runoff scenarios under synthetic rainfall events to examine streamflow variations, peak discharge, and catchment behavior for flood mitigation planning[cite: 1].</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section>
-            <h2>Work & Field Experience</h2>
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Field Student — Sewer Drainage System Implementation</span>
-                    <span class="item-meta">Nov 2025 – Dec 2025</span>
+            <!-- Projects Window -->
+            <section class="glass-card window-card float-anim delay-2">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <h2><i class="fa-solid fa-diagram-project"></i> Engineering Projects</h2>
                 </div>
-                <ul>
-                    <li>Observed pipeline installation processes during sewer drainage construction on-site[cite: 1].</li>
-                    <li>Supported technical surveying, elevation control calculations, and daily field coordination with project engineers[cite: 1].</li>
-                </ul>
-            </div>
-        </section>
 
-        <!-- Certifications -->
-        <section>
-            <h2>Certifications</h2>
-            <ul>
-                <li><strong>Flood Hazard and Exposure Mapping</strong> — UNESCO (Dec 2025)[cite: 1]</li>
-                <li><strong>ISO 14001:2015 Environmental Management System</strong> — Alison (Dec 2025)[cite: 1]</li>
-                <li><strong>Fundamentals of Remote Sensing</strong> — NASA (Nov 2025)[cite: 1]</li>
-                <li><strong>Hydrologic Modeling with HEC-HMS</strong> — UNESCO (Oct 2025)[cite: 1]</li>
-                <li><strong>Integrated Drought Management for Early Warning</strong> — Cap-Net (Sep 2025)[cite: 1]</li>
-                <li><strong>Integrated Water Resources Management for Climate Resilience</strong> — Cap-Net (Sep 2025)[cite: 1]</li>
-                <li><strong>Turkish Language C1 Certification</strong> — Ankara University (2024)[cite: 1]</li>
-                <li><strong>Leadership Training</strong> — Middle East Technical University (Jan 2024)[cite: 1]</li>
-                <li><strong>Water Safety Planning for Urban Water Supply</strong> — World Health Organization (Dec 2023)[cite: 1]</li>
-            </ul>
-        </section>
+                <!-- Master Thesis -->
+                <div class="project-box">
+                    <h3 class="project-title"><i class="fa-solid fa-book-bookmark"></i> Master’s Thesis: Regional Climate Variability & Hydraulic Drainage Design</h3>
+                    <p>Designed trapezoidal open earth drainage channels across seven provinces in Türkiye (Bursa, Aydın, Mersin, Kırşehir, Ordu, Muş, and Şanlıurfa) to assess regional climate impacts on channel width, depth, longitudinal slope, and flow capacity[cite: 1].</p>
+                    
+                    <ul class="styled-list">
+                        <li>Derived IDF curves from Turkish State Meteorological Service rainfall data[cite: 1].</li>
+                        <li>Applied the <strong>McMath empirical method</strong> (>25 km²) to estimate runoff for Çatalkaya Watershed[cite: 1].</li>
+                        <li>Sized trapezoidal open channels using the <strong>Manning equation</strong>[cite: 1].</li>
+                    </ul>
 
-        <!-- Technical Skills & Languages -->
-        <section>
-            <h2>Skills & Languages</h2>
-            <table>
-                <tr>
-                    <th>Technical Expertise</th>
-                    <td>Hydraulic drainage systems, wastewater treatment plants, hydrologic & hydraulic modeling, flood prediction, pump sizing, hydraulic calculations, environmental policy & water resources planning[cite: 1].</td>
-                </tr>
-                <tr>
-                    <th>Software Proficiency</th>
-                    <td>HEC-RAS (1D/2D), HEC-HMS, EPA SWMM, Autodesk Civil 3D, QGIS, Google Earth Engine, Microsoft Excel, Word, PowerPoint[cite: 1].</td>
-                </tr>
-                <tr>
-                    <th>Languages</th>
-                    <td>
-                        • <strong>French:</strong> Native[cite: 1]<br>
-                        • <strong>English:</strong> Fluent (C1)[cite: 1]<br>
-                        • <strong>Turkish:</strong> C1 Certified[cite: 1]
-                    </td>
-                </tr>
-            </table>
-        </section>
+                    <!-- Code / Formula Style Display -->
+                    <div class="code-banner">
+                        <div class="code-title"><i class="fa-solid fa-calculator"></i> Design Parameters & Geometry</div>
+                        <code>
+                            • Base Width (b) = 3 m  |  Depth (h) = 2.45 m  |  Freeboard (h.p) = 0.25 m[cite: 1]<br>
+                            • Top Width (T) = 2×2×h + b = 12.8 m  |  Total Depth (D) = 2.7 m[cite: 1]<br>
+                            • Embankments: Height = 1.5 m  |  Top Width = 2.5 m[cite: 1]
+                        </code>
+                    </div>
 
+                    <p class="nbs-tag"><i class="fa-solid fa-leaf"></i> <strong>Nature-Based Solutions (NBS):</strong> Proposed retention ponds and vegetated swale channels to enhance flood resilience, temporary storage, infiltration, and peak flow reduction[cite: 1].</p>
+                </div>
+
+                <hr class="divider">
+
+                <!-- Sakarya River -->
+                <div class="project-box">
+                    <div class="item-header-flex">
+                        <h3 class="project-title"><i class="fa-solid fa-river"></i> Sakarya River Flood Risk Assessment</h3>
+                        <span class="badge">May 2025</span>
+                    </div>
+                    <ul class="styled-list">
+                        <li>Delivered a technical presentation at Ankara University on HEC-RAS hydraulic modeling[cite: 1].</li>
+                        <li>Simulated multiple flood scenarios using 1D/2D HEC-RAS to evaluate profiles and map inundation extents[cite: 1].</li>
+                        <li>Executed statistical flood frequency analysis using <strong>Hyfran</strong>[cite: 1].</li>
+                        <li>Engineered a pumping system solution to mitigate urban flood risk[cite: 1].</li>
+                    </ul>
+                </div>
+
+                <hr class="divider">
+
+                <!-- IDF & Kossou -->
+                <div class="project-grid">
+                    <div class="mini-project">
+                        <h4><i class="fa-solid fa-chart-line"></i> IDF Curve Development</h4>
+                        <p>Constructed IDF curves using <strong>Gumbel extreme value distribution</strong> for 50-year return period rainfall intensities in hydraulic design[cite: 1].</p>
+                    </div>
+
+                    <div class="mini-project">
+                        <h4><i class="fa-solid fa-cloud-showers-heavy"></i> Kossou Watershed Modeling</h4>
+                        <p>Performed hydrologic modeling, calibration, and validation of the Kossou Watershed (Côte d'Ivoire) using <strong>HEC-HMS</strong> under varied rainfall events[cite: 1].</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Window -->
+            <section class="glass-card window-card float-anim delay-3">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <h2><i class="fa-solid fa-briefcase"></i> Field Experience</h2>
+                </div>
+
+                <div class="experience-card">
+                    <div class="item-header-flex">
+                        <h3>Sewer Drainage System Implementation — Field Student</h3>
+                        <span class="date-pill">Nov 2025 – Dec 2025</span>
+                    </div>
+                    <ul class="styled-list">
+                        <li>Observed pipeline installation processes during sewer drainage construction on-site[cite: 1].</li>
+                        <li>Supported technical surveying, elevation control calculations, and daily field coordination with project engineers[cite: 1].</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Skills & Languages Window -->
+            <section class="glass-card window-card float-anim delay-4">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <h2><i class="fa-solid fa-gears"></i> Skills & Software</h2>
+                </div>
+
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h4>Engineering Expertise</h4>
+                        <div class="tags">
+                            <span class="tag">Hydraulic Drainage</span>
+                            <span class="tag">Wastewater Treatment</span>
+                            <span class="tag">Hydrologic Modeling</span>
+                            <span class="tag">Flood Prediction</span>
+                            <span class="tag">Pump Sizing</span>
+                            <span class="tag">Water Resources Planning</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Software Proficiency</h4>
+                        <div class="tags glow-tags">
+                            <span class="tag highlighted">HEC-RAS (1D/2D)</span>
+                            <span class="tag highlighted">HEC-HMS</span>
+                            <span class="tag highlighted">EPA SWMM</span>
+                            <span class="tag highlighted">Autodesk Civil 3D</span>
+                            <span class="tag highlighted">QGIS</span>
+                            <span class="tag highlighted">Google Earth Engine</span>
+                            <span class="tag">MS Excel / PowerPoint</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="language-bars">
+                            <div class="lang-item">
+                                <span>French (Native)</span>
+                                <div class="progress-bar"><div class="fill" style="width: 100%;"></div></div>
+                            </div>
+                            <div class="lang-item">
+                                <span>English (Fluent / C1)</span>
+                                <div class="progress-bar"><div class="fill" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="lang-item">
+                                <span>Turkish (C1 Certified)</span>
+                                <div class="progress-bar"><div class="fill" style="width: 88%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Window -->
+            <section class="glass-card window-card full-width float-anim delay-5">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <h2><i class="fa-solid fa-certificate"></i> Professional Certifications</h2>
+                </div>
+
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <i class="fa-solid fa-shield-halved cert-icon"></i>
+                        <div>
+                            <h4>Flood Hazard & Exposure Mapping</h4>
+                            <p>UNESCO • Dec 2025[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-leaf cert-icon"></i>
+                        <div>
+                            <h4>ISO 14001:2015 EMS</h4>
+                            <p>Alison • Dec 2025[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-satellite cert-icon"></i>
+                        <div>
+                            <h4>Fundamentals of Remote Sensing</h4>
+                            <p>NASA • Nov 2025[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-water cert-icon"></i>
+                        <div>
+                            <h4>Hydrologic Modeling (HEC-HMS)</h4>
+                            <p>UNESCO • Oct 2025[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-temperature-high cert-icon"></i>
+                        <div>
+                            <h4>Integrated Drought Management</h4>
+                            <p>Cap-Net • Sep 2025[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-hand-holding-droplet cert-icon"></i>
+                        <div>
+                            <h4>IWRM for Climate Resilience</h4>
+                            <p>Cap-Net • Sep 2025[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-language cert-icon"></i>
+                        <div>
+                            <h4>Turkish Language C1</h4>
+                            <p>Ankara University • 2024[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-users cert-icon"></i>
+                        <div>
+                            <h4>Leadership Training</h4>
+                            <p>METU Ankara • Jan 2024[cite: 1]</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fa-solid fa-faucet-drip cert-icon"></i>
+                        <div>
+                            <h4>Water Safety Planning</h4>
+                            <p>WHO • Dec 2023[cite: 1]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     </div>
 
 </body>
