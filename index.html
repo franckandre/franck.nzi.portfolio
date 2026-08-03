@@ -1,250 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Portfolio of Kouamé Franck André N'Zi — Water Resources & Hydraulic Drainage Systems Engineer. Specializing in HEC-RAS, HEC-HMS, EPA SWMM, and GIS applications.">
-  <title>Kouamé Franck André N'Zi | Water Resources & Hydraulic Engineer</title>
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic & Professional Portfolio - Water Resources Engineering</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    body {
+      background-color: #f4f7f6;
+      color: #2d3748;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-block {
+      margin-bottom: 40px;
+    }
+
+    /* Section Header & Action Buttons */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+
+    .header h2 {
+      font-size: 1.6rem;
+      color: #1a202c;
+    }
+
+    .btn-primary {
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #2c5282;
+    }
+
+    /* Card List Styles */
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      border-left: 5px solid #2b6cb0;
+    }
+
+    .card-edu {
+      border-left-color: #3182ce; /* Blue for Education */
+    }
+
+    .card-project {
+      border-left-color: #319795; /* Teal for Projects */
+    }
+
+    .card-exp {
+      border-left-color: #dd6b20; /* Orange for Experience */
+    }
+
+    .card-seminar {
+      border-left-color: #805ad5; /* Purple for Seminars */
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      color: #2d3748;
+      margin-bottom: 4px;
+    }
+
+    .card .meta {
+      color: #718096;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .card ul {
+      margin-left: 20px;
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .card ul li {
+      margin-bottom: 6px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Image Container & Placeholder Styling */
+    .image-placeholder-container {
+      margin-top: 16px;
+      margin-bottom: 12px;
+      border: 2px dashed #cbd5e0;
+      border-radius: 8px;
+      background-color: #f7fafc;
+      padding: 20px;
+      text-align: center;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .image-placeholder-container:hover {
+      border-color: #319795;
+      background-color: #edf2f7;
+    }
+
+    .image-placeholder-icon {
+      font-size: 2rem;
+      color: #a0aec0;
+      margin-bottom: 8px;
+    }
+
+    .image-placeholder-text {
+      color: #718096;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .image-placeholder-subtext {
+      color: #a0aec0;
+      font-size: 0.8rem;
+      margin-top: 4px;
+    }
+
+    /* Rendered Image Style */
+    .project-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 6px;
+      margin-top: 14px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Badges */
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      background-color: #edf2f7;
+      color: #4a5568;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    /* Shared Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 100;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 550px;
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: translateY(-20px);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-header h3 {
+      font-size: 1.3rem;
+      color: #2d3748;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #a0aec0;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #e53e3e;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4a5568;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #319795;
+      box-shadow: 0 0 0 3px rgba(49, 151, 149, 0.15);
+    }
+
+    .form-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn-secondary {
+      background-color: #e2e8f0;
+      color: #4a5568;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      background-color: #cbd5e0;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#" class="logo">
-          <span class="logo-name">K. Franck André N'Zi</span>
-          <span class="logo-title" data-i18n="navTitle">Water Resources Engineer</span>
-        </a>
+  <div class="container">
+
+    <!-- SECTION 1: EDUCATION -->
+    <div class="section-block">
+      <div class="header">
+        <h2>Education</h2>
+        <button class="btn-primary" id="openEduModalBtn">+ Add Education</button>
+      </div>
+
+      <div class="card-list" id="eduList">
+        <div class="card card-edu">
+          <h3>Master of Science (M.Sc.) in Integrated Water Management</h3>
+          <div class="meta">Ankara University | Türkiye • 2024–2026</div>
+        </div>
+
+        <div class="card card-edu">
+          <h3>Master of Environmental Science (M.Sc.) in Water Science and Technology</h3>
+          <div class="meta">Nangui Abrogoua University | Ivory Coast • 2022–2023</div>
+        </div>
+
+        <div class="card card-edu">
+          <h3>Bachelor of Environmental Science (B.Sc.) in Water Science and Technology</h3>
+          <div class="meta">Nangui Abrogoua University | Ivory Coast • 2019–2022</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: PROJECTS -->
+    <div class="section-block">
+      <div class="header">
+        <h2>Projects</h2>
+        <button class="btn-primary" id="openProjectModalBtn">+ Add Project</button>
+      </div>
+
+      <div class="card-list" id="projectList">
         
-        <ul class="nav-links">
-          <li><a href="#about" data-i18n="navAbout">Overview</a></li>
-          <li><a href="#expertise" data-i18n="navSkills">Core Expertise</a></li>
-          <li><a href="#projects" data-i18n="navProjects">Technical Projects</a></li>
-          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+        <!-- PROJECT 1: KOSSOU WATERSHED HEC-HMS MODELING -->
+        <div class="card card-project">
+          <h3>Hydrologic Modeling, Calibration, and Validation of Kossou Watershed</h3>
+          <div class="meta">Kossou Watershed, Côte d'Ivoire | Hydrologic Analysis & Scenario Simulation</div>
           
-          <!-- Language Selector -->
-          <li class="lang-select-wrapper">
-            <i class="fa-solid fa-globe"></i>
-            <select id="lang-select" aria-label="Select Language">
-              <option value="en" selected>EN</option>
-              <option value="fr">FR</option>
-              <option value="tr">TR</option>
-            </select>
-          </li>
+          <p>Performed hydrologic modeling, calibration, and validation of the Kossou Watershed (Côte d'Ivoire) using HEC-HMS to evaluate watershed response under varying rainfall conditions.</p>
+          <p>Simulated future runoff scenarios using hypothetical rainfall events to assess changes in streamflow, peak discharge, and watershed hydrologic behavior, supporting flood risk assessment and water resources planning.</p>
+          
+          <!-- IMAGE PLACEHOLDER AREA -->
+          <div class="image-placeholder-container">
+            <div class="image-placeholder-icon">🌧️</div>
+            <div class="image-placeholder-text">Kossou Watershed Model / Hydrograph Image Placeholder</div>
+            <div class="image-placeholder-subtext">Replace this container with your <code>&lt;img src="kossou-watershed-model.png" alt="HEC-HMS Kossou Model" class="project-img" /&gt;</code> file</div>
+          </div>
 
-          <!-- Theme Toggle -->
-          <li>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-              <i class="fa-solid fa-moon"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
+          <div class="badge-container">
+            <span class="badge">HEC-HMS</span>
+            <span class="badge">Kossou Watershed</span>
+            <span class="badge">Hydrologic Modeling</span>
+            <span class="badge">Model Calibration & Validation</span>
+            <span class="badge">Streamflow Simulation</span>
+            <span class="badge">Peak Discharge Analysis</span>
+            <span class="badge">Water Resources Planning</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: IDF CURVE DEVELOPMENT -->
+        <div class="card card-project">
+          <h3>Intensity–Duration–Frequency (IDF) Curve Development</h3>
+          <div class="meta">Hydrological Modeling & Statistical Analysis</div>
+          
+          <p>Developed Intensity–Duration–Frequency (IDF) curves using the Gumbel probability distribution to estimate 50-year return period rainfall intensities for hydraulic and stormwater drainage design.</p>
+          
+          <!-- IMAGE PLACEHOLDER AREA -->
+          <div class="image-placeholder-container">
+            <div class="image-placeholder-icon">📊</div>
+            <div class="image-placeholder-text">IDF Curve Graph / Chart Placeholder</div>
+            <div class="image-placeholder-subtext">Replace this container with your <code>&lt;img src="your-idf-chart.png" alt="IDF Curve Chart" class="project-img" /&gt;</code> file</div>
+          </div>
+
+          <div class="badge-container">
+            <span class="badge">IDF Curves</span>
+            <span class="badge">Gumbel Distribution</span>
+            <span class="badge">50-Year Return Period</span>
+            <span class="badge">Hydrological Analysis</span>
+            <span class="badge">Stormwater Design</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: MASTER'S THESIS -->
+        <div class="card card-project">
+          <h3>Master’s Thesis: Open Earth Channel Drainage Design & Climate Analysis</h3>
+          <div class="meta">Çatalkaya Watershed | 7 Provinces (Bursa, Aydın, Mersin, Kırşehir, Ordu, Muş, Şanlıurfa)</div>
+          
+          <p>Designed trapezoidal open earth drainage channels for seven provinces representing different climatic regions of Türkiye to assess regional climate variability on channel width, depth, slope, and flow capacity.</p>
+          <p>Utilized Turkish State Meteorological Service rainfall intensity–duration (IDF) data and applied the McMath empirical method for runoff estimation (>25 km² watershed). Performed hydraulic sizing using the Manning equation.</p>
+          <p>Proposed nature-based solutions (retention pond & vegetated swale channel) to increase temporary storage, promote infiltration, and enhance flood resilience.</p>
+          
+          <div class="badge-container">
+            <span class="badge">Hydraulic Modeling</span>
+            <span class="badge">IDF Curves</span>
+            <span class="badge">McMath Method</span>
+            <span class="badge">Manning Equation</span>
+            <span class="badge">Nature-Based Solutions</span>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </header>
 
-  <main class="container">
-    
-    <!-- Hero / Profile Section -->
-    <section class="hero" id="about">
-      <div class="hero-badge" data-i18n="heroBadge">Integrated Water Management Specialist</div>
-      <h1 data-i18n="heroTitle">Kouamé Franck André N'Zi</h1>
-      <h2 data-i18n="heroSubtitle">Hydraulic Drainage Systems & Hydrologic Modeling Engineer</h2>
-      <p data-i18n="heroText">
-        Master’s graduate in <strong>Integrated Water Management</strong> specializing in <strong>Hydraulic Drainage Systems</strong>. Proven expertise in 1D/2D hydrodynamic simulations, urban stormwater management, watershed behavior modeling, and geospatial environmental analysis. Dedicated to engineering climate-resilient water infrastructures and mitigating flood hazards.
-      </p>
-      
-      <div class="cta-buttons">
-        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary">
-          <i class="fa-solid fa-paper-plane"></i> 
-          <span data-i18n="btnEmail">Initiate Contact</span>
-        </a>
-        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <i class="fa-brands fa-linkedin"></i> 
-          <span>LinkedIn Profile</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Core Technical Expertise -->
-    <section id="expertise">
-      <div class="section-header">
-        <h2><i class="fa-solid fa-layer-group"></i> <span data-i18n="skillsTitle">Technical Competencies</span></h2>
-        <p class="section-subtitle" data-i18n="skillsSub">Engineering tools, numerical modeling frameworks, and computational software.</p>
+    <!-- SECTION 3: EXPERIENCE -->
+    <div class="section-block">
+      <div class="header">
+        <h2>Experience</h2>
+        <button class="btn-primary" id="openExpModalBtn">+ Add Experience</button>
       </div>
 
-      <div class="skills-grid">
-        
-        <div class="skill-card">
-          <div class="card-icon icon-blue"><i class="fa-solid fa-water"></i></div>
-          <h3 data-i18n="skillCat1">Hydrologic & Hydraulic Modeling</h3>
-          <ul class="skill-list">
-            <li>
-              <strong>HEC-RAS (1D/2D)</strong>
-              <span data-i18n="sk1">Unsteady flow simulation, 2D floodplain inundation mapping, and dam/levee break analysis.</span>
-            </li>
-            <li>
-              <strong>HEC-HMS</strong>
-              <span data-i18n="sk2">Comprehensive watershed runoff generation, hydrograph development, and continuous flow simulation.</span>
-            </li>
-            <li>
-              <strong>EPA SWMM</strong>
-              <span data-i18n="sk3">Dynamic urban stormwater network modeling, sewer hydraulic evaluation, and LID performance assessment.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="card-icon icon-teal"><i class="fa-solid fa-earth-americas"></i></div>
-          <h3 data-i18n="skillCat2">Geospatial Analytics & Remote Sensing</h3>
-          <ul class="skill-list">
-            <li>
-              <strong>QGIS & Spatial Analysis</strong>
-              <span data-i18n="sk4">Terrain processing (DEM/DTM), automated basin delineation, and hydro-spatial parameter extraction.</span>
-            </li>
-            <li>
-              <strong>Google Earth Engine</strong>
-              <span data-i18n="sk5">Cloud-based satellite imagery analytics, land-use classification, and environmental temporal monitoring.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="card-icon icon-indigo"><i class="fa-solid fa-microchip"></i></div>
-          <h3 data-i18n="skillCat3">Technical Computing & Documentation</h3>
-          <ul class="skill-list">
-            <li>
-              <strong>Microsoft Excel (Advanced)</strong>
-              <span data-i18n="sk6">Hydraulic data manipulation, statistical hydrology, and automated engineering spreadsheets.</span>
-            </li>
-            <li>
-              <strong>Engineering Documentation</strong>
-              <span data-i18n="sk7">Technical report writing, executive presentations, and interdisciplinary project communication.</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Engineering Projects -->
-    <section id="projects">
-      <div class="section-header">
-        <h2><i class="fa-solid fa-diagram-project"></i> <span data-i18n="projectsTitle">Applied Engineering Projects</span></h2>
-        <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, and spatial studies.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-content">
-            <h3 data-i18n="p1Title">2D Hydrodynamic Flood Inundation Assessment</h3>
-            <p data-i18n="p1Desc">Integrated 1D/2D HEC-RAS hydrodynamic simulation to map high-risk flood zones, quantify depth-velocity hazards, and inform urban flood risk management strategies.</p>
+      <div class="card-list" id="expList">
+        <div class="card card-exp">
+          <h3>Internship: Sewer Drainage System Implementation</h3>
+          <div class="meta">Field Working Student | November 2025 – December 2025</div>
+          <p>Worked as a field working student during the implementation of an urban sewer drainage system.</p>
+          <p>Observed pipeline installation processes and supported surveying, elevation control, and on-site coordination with site engineers.</p>
+          
+          <div class="badge-container">
+            <span class="badge">Pipeline Installation</span>
+            <span class="badge">Land Surveying</span>
+            <span class="badge">Elevation Control</span>
+            <span class="badge">On-Site Coordination</span>
           </div>
-          <div class="tags">
-            <span class="tag tag-blue">HEC-RAS 1D/2D</span>
-            <span class="tag tag-teal" data-i18n="tagFlood">Flood Hazard Mapping</span>
-            <span class="tag tag-slate">Hydraulics</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-content">
-            <h3 data-i18n="p2Title">Watershed Rainfall-Runoff Transformation Modeling</h3>
-            <p data-i18n="p2Desc">Hydrological watershed modeling using HEC-HMS to evaluate hydrograph responses, peak discharge timing, and basin behavior under high-intensity rainfall scenarios.</p>
-          </div>
-          <div class="tags">
-            <span class="tag tag-blue">HEC-HMS</span>
-            <span class="tag tag-teal" data-i18n="tagHydro">Catchment Hydrology</span>
-            <span class="tag tag-slate">Runoff Analysis</span>
-            <img
-  src="https://raw.githubusercontent.com/franckandre/franckandre/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-07-24%20192244.png"
-  alt="this is image"
-  style="width:50%; height:auto;">
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-content">
-            <h3 data-i18n="p3Title">Urban Stormwater Infrastructure & Hydraulic Performance</h3>
-            <p data-i18n="p3Desc">EPA SWMM dynamic modeling of municipal drainage networks to evaluate conveyance capacity, pinpoint surcharging conduits, and propose drainage optimization measures.</p>
-          </div>
-          <div class="tags">
-            <span class="tag tag-blue">EPA SWMM</span>
-            <span class="tag tag-teal" data-i18n="tagUrban">Urban Drainage</span>
-            <span class="tag tag-slate">Stormwater</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-content">
-            <h3 data-i18n="p4Title">Geospatial Water Resource Monitoring & Analytics</h3>
-            <p data-i18n="p4Desc">Multi-temporal satellite data analysis using QGIS and Google Earth Engine to monitor hydrological features, land-cover dynamics, and surface water availability.</p>
-          </div>
-          <div class="tags">
-            <span class="tag tag-blue">QGIS</span>
-            <span class="tag tag-blue">Google Earth Engine</span>
-            <span class="tag tag-teal" data-i18n="tagGIS">Spatial Analytics</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Professional Advancement -->
-    <section>
-      <div class="section-header">
-        <h2><i class="fa-solid fa-chart-line"></i> <span data-i18n="devTitle">Professional Advancement & Training</span></h2>
-      </div>
-      
-      <div class="learning-card">
-        <div class="learning-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-        <div>
-          <strong data-i18n="devHeader">Autodesk Civil 3D — Infrastructure & Pipe Network Design</strong>
-          <p data-i18n="devDesc">Currently expanding operational mastery in 3D terrain modeling, automated pipe network layout, grading optimization, and BIM-integrated civil infrastructure drafting.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Contact & Engagement -->
-    <section id="contact">
-      <div class="contact-box">
-        <h2><i class="fa-solid fa-paper-plane"></i> <span data-i18n="contactTitle">Professional Engagement</span></h2>
-        <p data-i18n="contactDesc">
-          I am actively seeking engineering opportunities, research collaborations, or consulting roles focused on hydraulic modeling, urban drainage design, and water resources management.
-        </p>
-        <div class="cta-buttons center-buttons">
-          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary">
-            <i class="fa-solid fa-envelope"></i> 
-            <span data-i18n="btnEmailMe">Direct Inquiry</span>
-          </a>
-          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <i class="fa-brands fa-linkedin"></i> 
-            <span>Connect on LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; Kouamé Franck André N'Zi. <span data-i18n="footerText">All rights reserved. Water Resources Engineering Portfolio.</span></p>
     </div>
-  </footer>
 
-  <!-- Link External JavaScript -->
-  <script src="script.js"></script>
+    <!-- SECTION 4: SEMINARS & PRESENTATIONS -->
+    <div class="section-block">
+      <div class="header">
+        <h2>Seminars & Presentations</h2>
+        <button class="btn-primary" id="openSeminarModalBtn">+ Add Seminar</button>
+      </div>
+
+      <div class="card-list" id="seminarList">
+        <div class="card card-seminar">
+          <h3>Hydraulic Modeling & Flood Risk Assessment Using HEC-RAS</h3>
+          <div class="meta">Ankara University | May 23, 2025</div>
+          
+          <ul>
+            <li>Delivered a technical presentation on hydraulic modeling and flood risk assessment using HEC-RAS.</li>
+            <li>Developed a hydraulic model of the Sakarya River and simulated multiple flood scenarios to evaluate flood extent and water surface profiles.</li>
+            <li>Conducted statistical flood frequency analysis using Hyfran to estimate design flood discharges for different return periods.</li>
+            <li>Proposed a pumping system as a flood mitigation measure to improve drainage capacity and reduce flood risk in vulnerable areas.</li>
+            <li>Interpreted modeling results to support flood management and hydraulic infrastructure planning.</li>
+          </ul>
+
+          <div class="badge-container">
+            <span class="badge">HEC-RAS</span>
+            <span class="badge">Sakarya River</span>
+            <span class="badge">Hyfran</span>
+            <span class="badge">Flood Frequency Analysis</span>
+            <span class="badge">Pumping Systems</span>
+            <span class="badge">Flood Mitigation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL 1: ADD EDUCATION -->
+  <div class="modal-overlay" id="eduModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Add Education</h3>
+        <button class="close-btn" id="closeEduBtn">&times;</button>
+      </div>
+      <form id="eduForm">
+        <div class="form-group">
+          <label for="eduDegree">Degree / Qualification</label>
+          <input type="text" id="eduDegree" placeholder="e.g. Master of Science in Hydrology" required />
+        </div>
+        <div class="form-group">
+          <label for="eduInst">Institution / University</label>
+          <input type="text" id="eduInst" placeholder="e.g. Ankara University" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="eduLoc">Location</label>
+            <input type="text" id="eduLoc" placeholder="e.g. Türkiye" required />
+          </div>
+          <div class="form-group">
+            <label for="eduPeriod">Years / Period</label>
+            <input type="text" id="eduPeriod" placeholder="e.g. 2024–2026" required />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelEduBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Save Education</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: ADD PROJECT -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Add Project</h3>
+        <button class="close-btn" id="closeProjectBtn">&times;</button>
+      </div>
+      <form id="projectForm">
+        <div class="form-group">
+          <label for="projTitle">Project Title</label>
+          <input type="text" id="projTitle" placeholder="e.g. Watershed Drainage Sizing" required />
+        </div>
+        <div class="form-group">
+          <label for="projLocation">Location / Category</label>
+          <input type="text" id="projLocation" placeholder="e.g. Kossou Watershed, Côte d'Ivoire" required />
+        </div>
+        <div class="form-group">
+          <label for="projDesc">Description & Methodology</label>
+          <textarea id="projDesc" placeholder="Describe objectives, hydraulic equations, parameters..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="projImgUrl">Image URL (Optional)</label>
+          <input type="url" id="projImgUrl" placeholder="https://example.com/chart.png" />
+        </div>
+        <div class="form-group">
+          <label for="projTags">Tags (comma-separated)</label>
+          <input type="text" id="projTags" placeholder="e.g. HEC-HMS, Calibration, Streamflow" />
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelProjectBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 3: ADD EXPERIENCE -->
+  <div class="modal-overlay" id="expModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Add Experience</h3>
+        <button class="close-btn" id="closeExpBtn">&times;</button>
+      </div>
+      <form id="expForm">
+        <div class="form-group">
+          <label for="expRole">Role / Position</label>
+          <input type="text" id="expRole" placeholder="e.g. Sewer Drainage System Intern" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expType">Type / Organization</label>
+            <input type="text" id="expType" placeholder="e.g. Field Working Student" required />
+          </div>
+          <div class="form-group">
+            <label for="expDates">Period</label>
+            <input type="text" id="expDates" placeholder="e.g. Nov 2025 – Dec 2025" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="expDesc">Responsibilities</label>
+          <textarea id="expDesc" placeholder="Describe field work, surveying, coordination..." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelExpBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Save Experience</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 4: ADD SEMINAR -->
+  <div class="modal-overlay" id="seminarModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Add Seminar / Presentation</h3>
+        <button class="close-btn" id="closeSeminarBtn">&times;</button>
+      </div>
+      <form id="seminarForm">
+        <div class="form-group">
+          <label for="semTitle">Presentation / Seminar Title</label>
+          <input type="text" id="semTitle" placeholder="e.g. Hydraulic Modeling using HEC-RAS" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="semVenue">Venue / Institution</label>
+            <input type="text" id="semVenue" placeholder="e.g. Ankara University" required />
+          </div>
+          <div class="form-group">
+            <label for="semDate">Date</label>
+            <input type="text" id="semDate" placeholder="e.g. May 23, 2025" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="semPoints">Key Points (enter each point on a new line)</label>
+          <textarea id="semPoints" placeholder="Developed model of Sakarya River...&#10;Conducted Hyfran frequency analysis..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="semTags">Tags (comma-separated)</label>
+          <input type="text" id="semTags" placeholder="e.g. HEC-RAS, Hyfran, Flood Risk" />
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelSeminarBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Save Seminar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Helper function for Modal toggling
+    const setupModal = (overlayId, openBtnId, closeBtnId, cancelBtnId, formId, listId, renderFn) => {
+      const overlay = document.getElementById(overlayId);
+      const openBtn = document.getElementById(openBtnId);
+      const closeBtn = document.getElementById(closeBtnId);
+      const cancelBtn = document.getElementById(cancelBtnId);
+      const form = document.getElementById(formId);
+
+      const open = () => overlay.classList.add('active');
+      const close = () => {
+        overlay.classList.remove('active');
+        form.reset();
+      };
+
+      if(openBtn) openBtn.addEventListener('click', open);
+      if(closeBtn) closeBtn.addEventListener('click', close);
+      if(cancelBtn) cancelBtn.addEventListener('click', close);
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        renderFn();
+        close();
+      });
+    };
+
+    // 1. Education Logic
+    setupModal('eduModal', 'openEduModalBtn', 'closeEduBtn', 'cancelEduBtn', 'eduForm', 'eduList', () => {
+      const degree = document.getElementById('eduDegree').value;
+      const inst = document.getElementById('eduInst').value;
+      const loc = document.getElementById('eduLoc').value;
+      const period = document.getElementById('eduPeriod').value;
+
+      const card = document.createElement('div');
+      card.className = 'card card-edu';
+      card.innerHTML = `
+        <h3>${degree}</h3>
+        <div class="meta">${inst} | ${loc} • ${period}</div>
+      `;
+      document.getElementById('eduList').prepend(card);
+    });
+
+    // 2. Project Logic (supports image URLs or placeholders)
+    setupModal('projectModal', 'openProjectModalBtn', 'closeProjectBtn', 'cancelProjectBtn', 'projectForm', 'projectList', () => {
+      const title = document.getElementById('projTitle').value;
+      const location = document.getElementById('projLocation').value;
+      const desc = document.getElementById('projDesc').value;
+      const imgUrl = document.getElementById('projImgUrl').value;
+      const tags = document.getElementById('projTags').value.split(',').map(t => t.trim()).filter(t => t);
+
+      const card = document.createElement('div');
+      card.className = 'card card-project';
+      let tagsHTML = tags.map(tag => `<span class="badge">${tag}</span>`).join(' ');
+
+      let imageHTML = '';
+      if(imgUrl) {
+        imageHTML = `<img src="${imgUrl}" alt="${title}" class="project-img" />`;
+      } else {
+        imageHTML = `
+          <div class="image-placeholder-container">
+            <div class="image-placeholder-icon">📊</div>
+            <div class="image-placeholder-text">Project Diagram / Chart Placeholder</div>
+          </div>`;
+      }
+
+      card.innerHTML = `
+        <h3>${title}</h3>
+        <div class="meta">${location}</div>
+        <p>${desc}</p>
+        ${imageHTML}
+        ${tagsHTML ? `<div class="badge-container">${tagsHTML}</div>` : ''}
+      `;
+      document.getElementById('projectList').prepend(card);
+    });
+
+    // 3. Experience Logic
+    setupModal('expModal', 'openExpModalBtn', 'closeExpBtn', 'cancelExpBtn', 'expForm', 'expList', () => {
+      const role = document.getElementById('expRole').value;
+      const type = document.getElementById('expType').value;
+      const dates = document.getElementById('expDates').value;
+      const desc = document.getElementById('expDesc').value;
+
+      const card = document.createElement('div');
+      card.className = 'card card-exp';
+
+      card.innerHTML = `
+        <h3>${role}</h3>
+        <div class="meta">${type} | ${dates}</div>
+        <p>${desc}</p>
+      `;
+      document.getElementById('expList').prepend(card);
+    });
+
+    // 4. Seminar Logic
+    setupModal('seminarModal', 'openSeminarModalBtn', 'closeSeminarBtn', 'cancelSeminarBtn', 'seminarForm', 'seminarList', () => {
+      const title = document.getElementById('semTitle').value;
+      const venue = document.getElementById('semVenue').value;
+      const date = document.getElementById('semDate').value;
+      const pointsRaw = document.getElementById('semPoints').value.split('\n').filter(p => p.trim());
+      const tags = document.getElementById('semTags').value.split(',').map(t => t.trim()).filter(t => t);
+
+      const card = document.createElement('div');
+      card.className = 'card card-seminar';
+
+      let listItemsHTML = pointsRaw.map(pt => `<li>${pt}</li>`).join('');
+      let tagsHTML = tags.map(tag => `<span class="badge">${tag}</span>`).join(' ');
+
+      card.innerHTML = `
+        <h3>${title}</h3>
+        <div class="meta">${venue} | ${date}</div>
+        <ul>${listItemsHTML}</ul>
+        ${tagsHTML ? `<div class="badge-container">${tagsHTML}</div>` : ''}
+      `;
+      document.getElementById('seminarList').prepend(card);
+    });
+  </script>
 </body>
+</html>
