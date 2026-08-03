@@ -1,551 +1,235 @@
-/* ===== Style global et Améliorations UX ===== */
-html {
-    scroll-behavior: smooth;
-}
-body { 
-    background-color: #f9fbff;
-    color: #1a1a1a;
-    font-family: Calibri, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Portfolio of Kouamé Franck André N'Zi — Water Resources & Hydraulic Drainage Systems Engineer. Specializing in HEC-RAS, HEC-HMS, EPA SWMM, and GIS applications.">
+  <title>Kouamé Franck André N'Zi | Water Resources & Hydraulic Engineer</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
-/* ===== Liens (Général) ===== */
-a {
-    color: #0066cc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
 
-a:hover {
-    color: #004080;
-    text-decoration: underline;
-}
-/* #######################################
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <span class="logo-name">K. Franck André N'Zi</span>
+          <span class="logo-title" data-i18n="navTitle">Water Resources Engineer</span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="navAbout">Overview</a></li>
+          <li><a href="#expertise" data-i18n="navSkills">Core Expertise</a></li>
+          <li><a href="#projects" data-i18n="navProjects">Technical Projects</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+          
+          <!-- Language Selector -->
+          <li class="lang-select-wrapper">
+            <i class="fa-solid fa-globe"></i>
+            <select id="lang-select" aria-label="Select Language">
+              <option value="en" selected>EN</option>
+              <option value="fr">FR</option>
+              <option value="tr">TR</option>
+            </select>
+          </li>
 
-/* ************************************** */
-/* TITRE BIENVENUE : TAILLE ET DYNAMISME */
-/* ************************************** */
-.animated-title {
-    /* Augmentation de la taille */
-    font-size: 3.2em; 
-    font-weight: 900;
-    margin: 0;
+          <!-- Theme Toggle -->
+          <li>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
     
-    /* Effet de couleur dégradée */
-    background: linear-gradient(90deg, #003366, #0066cc, #00b3ff, #003366);
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    /* Double animation : Couleurs + Mouvement */
-    animation: 
-        shine 4s linear infinite, 
-        floatContinuous 3s ease-in-out infinite;
-    
-    display: inline-block;
-    letter-spacing: -1px; /* Pour un look plus moderne/compact */
-}
+    <!-- Hero / Profile Section -->
+    <section class="hero" id="about">
+      <div class="hero-badge" data-i18n="heroBadge">Integrated Water Management Specialist</div>
+      <h1 data-i18n="heroTitle">Kouamé Franck André N'Zi</h1>
+      <h2 data-i18n="heroSubtitle">Hydraulic Drainage Systems & Hydrologic Modeling Engineer</h2>
+      <p data-i18n="heroText">
+        Master’s graduate in <strong>Integrated Water Management</strong> specializing in <strong>Hydraulic Drainage Systems</strong>. Proven expertise in 1D/2D hydrodynamic simulations, urban stormwater management, watershed behavior modeling, and geospatial environmental analysis. Dedicated to engineering climate-resilient water infrastructures and mitigating flood hazards.
+      </p>
+      
+      <div class="cta-buttons">
+        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="btnEmail">Initiate Contact</span></a>
+        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+      </div>
+    </section>
 
-/* Animation des couleurs (défilement) */
-@keyframes shine {
-    0% { background-position: 0% center; }
-    100% { background-position: 300% center; }
-}
+    <!-- Core Technical Expertise -->
+    <section id="expertise">
+      <div class="section-header">
+        <h2 data-i18n="skillsTitle"><i class="fa-solid fa-layer-group"></i> Technical Competencies</h2>
+        <p class="section-subtitle" data-i18n="skillsSub">Engineering tools, numerical modeling frameworks, and computational software.</p>
+      </div>
 
-/* Animation de mouvement (flottement fluide) */
-@keyframes floatContinuous {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Le titre monte de 10px */
-    }
-}
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-water"></i></div>
+          <h3 data-i18n="skillCat1">Hydrologic & Hydraulic Modeling</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>HEC-RAS (1D/2D)</strong>
+              <span data-i18n="sk1">Unsteady flow simulation, 2D floodplain inundation mapping, and dam/levee break analysis.</span>
+            </li>
+            <li>
+              <strong>HEC-HMS</strong>
+              <span data-i18n="sk2">Comprehensive watershed runoff generation, hydrograph development, and continuous flow simulation.</span>
+            </li>
+            <li>
+              <strong>EPA SWMM</strong>
+              <span data-i18n="sk3">Dynamic urban stormwater network modeling, sewer hydraulic evaluation, and LID performance assessment.</span>
+            </li>
+          </ul>
+        </div>
 
-/* Ajustement pour le header-main pour éviter que le titre ne touche le haut */
-.header-main {
-    padding: 30px 0; /* Plus d'espace pour laisser respirer le gros titre */
-}
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <h3 data-i18n="skillCat2">Geospatial Analytics & Remote Sensing</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>QGIS & Spatial Analysis</strong>
+              <span data-i18n="sk4">Terrain processing (DEM/DTM), automated basin delineation, and hydro-spatial parameter extraction.</span>
+            </li>
+            <li>
+              <strong>Google Earth Engine</strong>
+              <span data-i18n="sk5">Cloud-based satellite imagery analytics, land-use classification, and environmental temporal monitoring.</span>
+            </li>
+          </ul>
+        </div>
 
-/* ************************************** */
-/* RESPONSIVE : Titre plus petit sur mobile */
-/* ************************************** */
-@media (max-width: 900px) {
-    .animated-title {
-        font-size: 2em; /* Réduction pour éviter que ça dépasse sur téléphone */
-    }
-}
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3 data-i18n="skillCat3">Technical Computing & Documentation</h3>
+          <ul class="skill-list">
+            <li>
+              <strong>Microsoft Excel (Advanced)</strong>
+              <span data-i18n="sk6">Hydraulic data manipulation, statistical hydrology, and automated engineering spreadsheets.</span>
+            </li>
+            <li>
+              <strong>Engineering Documentation</strong>
+              <span data-i18n="sk7">Technical report writing, executive presentations, and interdisciplinary project communication.</span>
+            </li>
+          </ul>
+        </div>
 
-/* ************************************** */
-/* BOUTONS AVEC CADRE (HEADER & PROJETS) */
-/* ************************************** */
+      </div>
+    </section>
 
-/* Style pour les boutons du haut (CV & Projets Data) */
-.header-buttons a.button-inline {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 10px;
-    
-    /* Le Cadre */
-    background: transparent;           /* Fond transparent */
-    color: #0066cc;                    /* Texte bleu */
-    border: 2px solid #0066cc;         /* Contour bleu */
-    
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;         /* Animation fluide */
-}
+    <!-- Engineering Projects -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 data-i18n="projectsTitle"><i class="fa-solid fa-diagram-project"></i> Applied Engineering Projects</h2>
+        <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, and spatial studies.</p>
+      </div>
 
-/* Effet au survol (Remplissage) */
-.header-buttons a.button-inline:hover {
-    background: #0066cc;               /* Le fond devient bleu */
-    color: white;                      /* Le texte devient blanc */
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3); /* Ombre portée */
-    transform: translateY(-2px);       /* Petit soulèvement */
-}
+      <div class="projects-grid">
 
-/* Style pour le bouton "Voir le projet détaillé" */
-.project-item .button-project {
-    display: inline-block;
-    padding: 8px 18px;
-    margin-top: 15px;
-    
-    /* Le Cadre */
-    background: white;
-    color: #003366;
-    border: 2px solid #003366;         /* Contour plus foncé pour les projets */
-    
-    border-radius: 6px;
-    font-size: 0.9em;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p1Title">2D Hydrodynamic Flood Inundation Assessment</h3>
+            <p data-i18n="p1Desc">Integrated 1D/2D HEC-RAS hydrodynamic simulation to map high-risk flood zones, quantify depth-velocity hazards, and inform urban flood risk management strategies.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">HEC-RAS 1D/2D</span>
+            <span class="tag" data-i18n="tagFlood">Flood Hazard Mapping</span>
+            <span class="tag">Hydraulics</span>
+          </div>
+        </div>
 
-/* Effet au survol (Remplissage) */
-.project-item .button-project:hover {
-    background: #003366;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
-}
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p2Title">Watershed Rainfall-Runoff Transformation Modeling</h3>
+            <p data-i18n="p2Desc">Hydrological watershed modeling using HEC-HMS to evaluate hydrograph responses, peak discharge timing, and basin behavior under high-intensity rainfall scenarios.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">HEC-HMS</span>
+            <span class="tag" data-i18n="tagHydro">Catchment Hydrology</span>
+            <span class="tag">Runoff Analysis</span>
+          </div>
+        </div>
 
-/* Optionnel : Supprimer l'ancienne animation wave si elle existe encore */
-.main .animated-title {
-    animation: shine 3s linear infinite; /* On remplace wave par shine */
-}
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p3Title">Urban Stormwater Infrastructure & Hydraulic Performance</h3>
+            <p data-i18n="p3Desc">EPA SWMM dynamic modeling of municipal drainage networks to evaluate conveyance capacity, pinpoint surcharging conduits, and propose drainage optimization measures.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">EPA SWMM</span>
+            <span class="tag" data-i18n="tagUrban">Urban Drainage</span>
+            <span class="tag">Stormwater</span>
+          </div>
+        </div>
 
-/* ################################### */
+        <div class="project-card">
+          <div class="project-content">
+            <h3 data-i18n="p4Title">Geospatial Water Resource Monitoring & Analytics</h3>
+            <p data-i18n="p4Desc">Multi-temporal satellite data analysis using QGIS and Google Earth Engine to monitor hydrological features, land-cover dynamics, and surface water availability.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">QGIS</span>
+            <span class="tag">Google Earth Engine</span>
+            <span class="tag" data-i18n="tagGIS">Spatial Analytics</span>
+          </div>
+        </div>
 
-/* ===== Titres (Général) ===== */
-h1, h2, h3, h4 {
-    color: #003366;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
+      </div>
+    </section>
 
-/* ===== Sidebar figée (Desktop) ===== */
-.sidebar {
-    width: 30%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background: #003366; 
-    color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
+    <!-- Professional Advancement -->
+    <section>
+      <div class="section-header">
+        <h2 data-i18n="devTitle"><i class="fa-solid fa-chart-line"></i> Professional Advancement & Training</h2>
+      </div>
+      
+      <div class="learning-card">
+        <div class="learning-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+        <div>
+          <strong data-i18n="devHeader">Autodesk Civil 3D — Infrastructure & Pipe Network Design</strong>
+          <p data-i18n="devDesc">Currently expanding operational mastery in 3D terrain modeling, automated pipe network layout, grading optimization, and BIM-integrated civil infrastructure drafting.</p>
+        </div>
+      </div>
+    </section>
 
-.sidebar img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid white;
-    display: block;
-    margin: 0 auto 20px;
-}
+    <!-- Contact & Engagement -->
+    <section id="contact">
+      <div class="contact-box">
+        <h2 data-i18n="contactTitle">Professional Engagement</h2>
+        <p data-i18n="contactDesc">
+          I am actively seeking engineering opportunities, research collaborations, or consulting roles focused on hydraulic modeling, urban drainage design, and water resources management.
+        </p>
+        <div class="cta-buttons center-buttons">
+          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> <span data-i18n="btnEmailMe">Direct Inquiry</span></a>
+          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
 
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: white; 
-}
+  </main>
 
-/* ===== Barre de contact (Icônes rondes) ===== */
-.contact-bar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-}
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; Kouamé Franck André N'Zi. <span data-i18n="footerText">All rights reserved. Water Resources Engineering Portfolio.</span></p>
+    </div>
+  </footer>
 
-.contact-bar a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #a0c3e6;
-    transition: color 0.3s;
-}
-
-.contact-bar i {
-    color: #003366;          /* Icône bleue */
-    background-color: white; /* Fond blanc */
-    border-radius: 50%;
-    width: 36px;             
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    flex-shrink: 0;          /* Empêche la déformation */
-    transition: background-color 0.3s;
-}
-
-.contact-bar span {
-    margin-left: 10px;
-    font-size: 0.9em;
-    white-space: nowrap;
-}
-
-.contact-bar a:hover {
-    color: white;
-}
-
-.contact-bar a:hover i {
-    background-color: #a0c3e6;
-}
-
-/* ===== Sections dans la Sidebar (Cartes Bleues) ===== */
-.sidebar .about,
-.sidebar .skills-tech-container,
-.sidebar .skills-tools-container,
-.skills-card {
-    background-color: #0066cc; /* Bleu clair harmonisé */
-    color: white; 
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    margin-top: 10px; 
-    margin-bottom: 25px; 
-}
-
-.sidebar h4 {
-    color: white; 
-    margin-top: 25px; 
-    font-size: 1.1em; 
-}
-
-/* ===== Outils (Badges/Tags) ===== */
-.skills-tools {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.skill-tag {
-    display: inline-flex;
-    align-items: center;
-    background: white; 
-    color: #003366; 
-    padding: 5px 15px 5px 5px; /* Padding asymétrique pour le cercle */
-    border-radius: 50px;
-    font-size: 0.85em; 
-    font-weight: 600;
-    white-space: nowrap;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.skill-tag i {
-    color: white;
-    background-color: #003366;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    flex-shrink: 0;
-}
-
-.skill-tag:hover {
-    background: #e6f0ff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    /* TRANSFORM SCALE SUPPRIMÉ POUR ÉVITER LES BUGS DE SUPERPOSITION */
-}
-
-/* ===== Compétences Techniques (Liste épurée) ===== */
-.skills-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skills-card li {
-    color: white;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.skills-card li::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* ===== Colonne principale (Contenu) ===== */
-.main {
-    margin-left: 30%;
-    padding: 40px;
-    box-sizing: border-box;
-}
-
-.header-main {
-    position: sticky; 
-    top: 0;          
-    z-index: 10;      
-    background-color: #f9fbff; 
-    padding: 15px 0 20px 0;    
-    border-bottom: 1px solid #e0e0e0; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* ===== Items Projets & Expériences ===== */
-.project-item, .experience-item { 
-    background: white;
-    border-left: 5px solid #0066cc;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.2s;
-}
-
-.project-item:hover, .experience-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.project-item .project-image {
-    width: 250px;
-    height: auto;
-    float: right; 
-    margin: 0 0 10px 15px; 
-    border-radius: 5px;
-}
-
-.project-item::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* ########################################## */
-/* ########################################## */
-/* ########################################## */
-
-/* Conteneur aligné avec le logo miniature */
-.item-header-with-logo {
-    display: flex;
-    align-items: center; /* Aligne le logo verticalement au milieu du titre */
-    gap: 15px;           /* Espace entre le logo et le texte */
-    margin-bottom: 12px;
-}
-
-/* Le Logo miniature décalé */
-.company-logo {
-    width: 45px;             /* Taille miniature */
-    height: 45px;
-    flex-shrink: 0;          /* Empêche le logo de rétrécir */
-    object-fit: contain;     /* Garde les proportions du logo */
-    background-color: white; 
-    padding: 4px;
-    border-radius: 6px;      /* Coins arrondis style icône appli */
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-/* Ajustement des titres à côté du logo */
-.item-header-with-logo h3 {
-    margin: 0;               /* Supprime les marges par défaut */
-    font-size: 1.2em;
-    color: #003366;
-}
-
-.company-name {
-    margin: 2px 0 0 0;
-    font-size: 0.95em;
-    color: #0066cc;
-    font-weight: bold;
-}
-
-.experience-dates {
-    display: block;
-    font-size: 0.85em;
-    color: #777;
-    margin-top: 2px;
-}
-
-/* Version Mobile : on garde l'alignement horizontal mais on réduit un peu */
-@media (max-width: 600px) {
-    .company-logo {
-        width: 35px;
-        height: 35px;
-    }
-    .item-header-with-logo h3 {
-        font-size: 1.1em;
-    }
-}
-
-/* ########################################## */
-/* ########################################## */
-/* ########################################## */
-/* --- Style des Certificats en bandes horizontales --- */
-.certif-item {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    
-    /* La petite bande horizontale/verticale à gauche */
-    border-left: 5px solid #0066cc; 
-    
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
-
-.certif-item:hover {
-    transform: translateX(5px); /* Petit décalage vers la droite au survol */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-/* Alignement du contenu interne */
-.certif-info {
-    display: flex;
-    align-items: center; /* Aligne l'icône et le texte sur la même ligne */
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.certif-icon {
-    font-size: 1.5em;
-    color: #0066cc;
-    width: 30px;
-    text-align: center;
-}
-
-.certif-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.certif-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #003366;
-}
-
-.certif-date {
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* Conteneur des boutons en bas de la bande */
-.certif-actions {
-    display: flex;
-    gap: 10px;
-    padding-left: 45px; /* Aligne les boutons sous le texte (après l'icône) */
-}
-
-/* ########################################## */
-/* ########################################## */
-/* ########################################## */
-
-/* --- Boutons des Certifications --- */
-
-/* On cible spécifiquement les liens dans la section certification pour forcer le cadre */
-.section.certif a.certif-link, 
-.section.certif a.verification-sticker {
-    display: inline-flex !important; /* Force l'affichage en bloc pour voir le cadre */
-    font-size: 0.85em !important;
-    padding: 6px 14px !important;
-    margin: 5px 5px 5px 0 !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600 !important;
-    transition: all 0.3s ease;
-    
-    /* LE CADRE : On le met plus foncé pour être sûr qu'il se voit */
-    border: 1.5px solid #0066cc !important; 
-    background-color: #ffffff !important;
-}
-
-/* Style spécifique pour le bouton Bleu */
-.section.certif a.certif-link {
-    color: #0066cc !important;
-    border-color: #0066cc !important;
-}
-
-/* Style spécifique pour le bouton Vert (Authenticité) */
-.section.certif a.verification-sticker {
-    color: #28a745 !important;
-    border-color: #28a745 !important;
-}
-
-/* Effets au survol */
-.section.certif a.certif-link:hover {
-    background-color: #0066cc !important;
-    color: #ffffff !important;
-}
-
-.section.certif a.verification-sticker:hover {
-    background-color: #28a745 !important;
-    color: #ffffff !important;
-}
-
-/* ########################################## */
-/* ########################################## */
-/* ########################################## */
-
-/* Responsive : sur mobile, on empile le logo et le texte */
-@media (max-width: 600px) {
-    .item-header-with-logo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-/* ===== Responsive (Mobile) ===== */
-@media (max-width: 900px) {
-    .sidebar, .main {
-        width: 100%;
-        position: static;
-        margin-left: 0;
-    }
-    .sidebar {
-        height: auto;
-    }
-    .project-item .project-image {
-        float: none;
-        display: block;
-        margin: 10px auto;
-        width: 100%;
-    }
-}
+  <!-- Link External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
