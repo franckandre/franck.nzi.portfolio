@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -56,10 +56,8 @@
   <main class="container">
     
     <!-- Hero / Profile Section -->
-    <section class="hero animate-fade-in" id="about">
-      <div class="hero-badge animate-pulse" data-i18n="heroBadge">
-        <span class="badge-dot"></span> Integrated Water Management Specialist
-      </div>
+    <section class="hero" id="about">
+      <div class="hero-badge" data-i18n="heroBadge">Integrated Water Management Specialist</div>
       <h1 data-i18n="heroTitle">Kouamé Franck André N'Zi</h1>
       <h2 data-i18n="heroSubtitle">Hydraulic Drainage Systems & Hydrologic Modeling Engineer</h2>
       <p data-i18n="heroText">
@@ -67,32 +65,22 @@
       </p>
       
       <div class="cta-buttons">
-        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary">
-          <i class="fa-solid fa-paper-plane"></i> 
-          <span data-i18n="btnEmail">Initiate Contact</span>
-        </a>
-        <button id="open-cv-btn" class="btn btn-secondary">
-          <i class="fa-solid fa-file-pdf"></i> 
-          <span data-i18n="btnResume">View Qualifications (CV)</span>
-        </button>
-        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <i class="fa-brands fa-linkedin"></i> 
-          <span>LinkedIn</span>
-        </a>
+        <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="btnEmail">Initiate Contact</span></a>
+        <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
       </div>
     </section>
 
     <!-- Core Technical Expertise -->
-    <section id="expertise" class="animate-on-scroll">
+    <section id="expertise">
       <div class="section-header">
-        <h2><i class="fa-solid fa-layer-group"></i> <span data-i18n="skillsTitle">Technical Competencies</span></h2>
+        <h2 data-i18n="skillsTitle"><i class="fa-solid fa-layer-group"></i> Technical Competencies</h2>
         <p class="section-subtitle" data-i18n="skillsSub">Engineering tools, numerical modeling frameworks, and computational software.</p>
       </div>
 
       <div class="skills-grid">
         
-        <div class="skill-card animate-card">
-          <div class="card-icon icon-blue"><i class="fa-solid fa-water"></i></div>
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-water"></i></div>
           <h3 data-i18n="skillCat1">Hydrologic & Hydraulic Modeling</h3>
           <ul class="skill-list">
             <li>
@@ -110,8 +98,8 @@
           </ul>
         </div>
 
-        <div class="skill-card animate-card">
-          <div class="card-icon icon-teal"><i class="fa-solid fa-earth-americas"></i></div>
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
           <h3 data-i18n="skillCat2">Geospatial Analytics & Remote Sensing</h3>
           <ul class="skill-list">
             <li>
@@ -125,8 +113,8 @@
           </ul>
         </div>
 
-        <div class="skill-card animate-card">
-          <div class="card-icon icon-indigo"><i class="fa-solid fa-microchip"></i></div>
+        <div class="skill-card">
+          <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
           <h3 data-i18n="skillCat3">Technical Computing & Documentation</h3>
           <ul class="skill-list">
             <li>
@@ -144,59 +132,59 @@
     </section>
 
     <!-- Engineering Projects -->
-    <section id="projects" class="animate-on-scroll">
+    <section id="projects">
       <div class="section-header">
-        <h2><i class="fa-solid fa-diagram-project"></i> <span data-i18n="projectsTitle">Applied Engineering Projects</span></h2>
+        <h2 data-i18n="projectsTitle"><i class="fa-solid fa-diagram-project"></i> Applied Engineering Projects</h2>
         <p class="section-subtitle" data-i18n="projectsSub">Selected technical evaluations, hydraulic modeling assessments, and spatial studies.</p>
       </div>
 
       <div class="projects-grid">
 
-        <div class="project-card animate-card">
+        <div class="project-card">
           <div class="project-content">
             <h3 data-i18n="p1Title">2D Hydrodynamic Flood Inundation Assessment</h3>
             <p data-i18n="p1Desc">Integrated 1D/2D HEC-RAS hydrodynamic simulation to map high-risk flood zones, quantify depth-velocity hazards, and inform urban flood risk management strategies.</p>
           </div>
           <div class="tags">
-            <span class="tag tag-blue">HEC-RAS 1D/2D</span>
-            <span class="tag tag-teal" data-i18n="tagFlood">Flood Hazard Mapping</span>
-            <span class="tag tag-slate">Hydraulics</span>
+            <span class="tag">HEC-RAS 1D/2D</span>
+            <span class="tag" data-i18n="tagFlood">Flood Hazard Mapping</span>
+            <span class="tag">Hydraulics</span>
           </div>
         </div>
 
-        <div class="project-card animate-card">
+        <div class="project-card">
           <div class="project-content">
             <h3 data-i18n="p2Title">Watershed Rainfall-Runoff Transformation Modeling</h3>
             <p data-i18n="p2Desc">Hydrological watershed modeling using HEC-HMS to evaluate hydrograph responses, peak discharge timing, and basin behavior under high-intensity rainfall scenarios.</p>
           </div>
           <div class="tags">
-            <span class="tag tag-blue">HEC-HMS</span>
-            <span class="tag tag-teal" data-i18n="tagHydro">Catchment Hydrology</span>
-            <span class="tag tag-slate">Runoff Analysis</span>
+            <span class="tag">HEC-HMS</span>
+            <span class="tag" data-i18n="tagHydro">Catchment Hydrology</span>
+            <span class="tag">Runoff Analysis</span>
           </div>
         </div>
 
-        <div class="project-card animate-card">
+        <div class="project-card">
           <div class="project-content">
             <h3 data-i18n="p3Title">Urban Stormwater Infrastructure & Hydraulic Performance</h3>
             <p data-i18n="p3Desc">EPA SWMM dynamic modeling of municipal drainage networks to evaluate conveyance capacity, pinpoint surcharging conduits, and propose drainage optimization measures.</p>
           </div>
           <div class="tags">
-            <span class="tag tag-blue">EPA SWMM</span>
-            <span class="tag tag-teal" data-i18n="tagUrban">Urban Drainage</span>
-            <span class="tag tag-slate">Stormwater</span>
+            <span class="tag">EPA SWMM</span>
+            <span class="tag" data-i18n="tagUrban">Urban Drainage</span>
+            <span class="tag">Stormwater</span>
           </div>
         </div>
 
-        <div class="project-card animate-card">
+        <div class="project-card">
           <div class="project-content">
             <h3 data-i18n="p4Title">Geospatial Water Resource Monitoring & Analytics</h3>
             <p data-i18n="p4Desc">Multi-temporal satellite data analysis using QGIS and Google Earth Engine to monitor hydrological features, land-cover dynamics, and surface water availability.</p>
           </div>
           <div class="tags">
-            <span class="tag tag-blue">QGIS</span>
-            <span class="tag tag-blue">Google Earth Engine</span>
-            <span class="tag tag-teal" data-i18n="tagGIS">Spatial Analytics</span>
+            <span class="tag">QGIS</span>
+            <span class="tag">Google Earth Engine</span>
+            <span class="tag" data-i18n="tagGIS">Spatial Analytics</span>
           </div>
         </div>
 
@@ -204,12 +192,12 @@
     </section>
 
     <!-- Professional Advancement -->
-    <section class="animate-on-scroll">
+    <section>
       <div class="section-header">
-        <h2><i class="fa-solid fa-chart-line"></i> <span data-i18n="devTitle">Professional Advancement & Training</span></h2>
+        <h2 data-i18n="devTitle"><i class="fa-solid fa-chart-line"></i> Professional Advancement & Training</h2>
       </div>
       
-      <div class="learning-card animate-card">
+      <div class="learning-card">
         <div class="learning-icon"><i class="fa-solid fa-compass-drafting"></i></div>
         <div>
           <strong data-i18n="devHeader">Autodesk Civil 3D — Infrastructure & Pipe Network Design</strong>
@@ -219,49 +207,20 @@
     </section>
 
     <!-- Contact & Engagement -->
-    <section id="contact" class="animate-on-scroll">
+    <section id="contact">
       <div class="contact-box">
-        <h2><i class="fa-solid fa-paper-plane"></i> <span data-i18n="contactTitle">Professional Engagement</span></h2>
+        <h2 data-i18n="contactTitle">Professional Engagement</h2>
         <p data-i18n="contactDesc">
           I am actively seeking engineering opportunities, research collaborations, or consulting roles focused on hydraulic modeling, urban drainage design, and water resources management.
         </p>
         <div class="cta-buttons center-buttons">
-          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary">
-            <i class="fa-solid fa-envelope"></i> 
-            <span data-i18n="btnEmailMe">Direct Inquiry</span>
-          </a>
-          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <i class="fa-brands fa-linkedin"></i> 
-            <span>Connect on LinkedIn</span>
-          </a>
+          <a href="mailto:franckandrenzi@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> <span data-i18n="btnEmailMe">Direct Inquiry</span></a>
+          <a href="https://www.linkedin.com/in/kouame-franck-andre-n-zi-34b28330a" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn</a>
         </div>
       </div>
     </section>
 
   </main>
-
-  <!-- Interactive Modal Window for Qualifications / CV -->
-  <div id="cv-modal" class="modal-overlay" aria-hidden="true">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3><i class="fa-solid fa-file-pdf"></i> <span data-i18n="modalTitle">Curriculum Vitae / Qualifications</span></h3>
-        <button id="close-modal-btn" class="modal-close-btn" aria-label="Close Modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="modal-placeholder">
-          <i class="fa-solid fa-file-contract placeholder-icon"></i>
-          <h4>Kouamé Franck André N'Zi — Engineering CV</h4>
-          <p data-i18n="modalDesc">Place your custom CV PDF file named <code>resume.pdf</code> in your project repository to render full preview.</p>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="resume.pdf" download class="btn btn-primary btn-sm">
-          <i class="fa-solid fa-download"></i> <span data-i18n="modalDownload">Download PDF Document</span>
-        </a>
-        <button id="close-modal-footer" class="btn btn-secondary btn-sm" data-i18n="modalClose">Close Window</button>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer>
